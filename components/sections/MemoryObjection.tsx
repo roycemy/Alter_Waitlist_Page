@@ -265,7 +265,7 @@ export function MemoryObjection() {
             data-question
             className="max-w-[23ch] font-display text-[clamp(2.1rem,5vw,3.6rem)] leading-[1.08] tracking-[-0.02em] text-ink"
           >
-            &quot;Doesn&apos;t ChatGPT already have memory?&quot;
+            “Doesn’t ChatGPT already have memory?”
           </h2>
         </div>
       </Container>
@@ -282,7 +282,7 @@ export function MemoryObjection() {
               {/* ── Their memory ─────────────────────────────────────────── */}
               <div
                 data-col="theirs"
-                className="relative flex min-w-0 flex-col overflow-hidden rounded-md border border-line bg-paper-deep p-6 sm:p-8 md:min-h-[60vh] lg:min-h-[66vh]"
+                className="relative flex min-w-0 flex-col overflow-hidden rounded-md border border-line bg-paper-deep p-6 sm:p-8 md:min-h-[52vh] lg:min-h-[56vh]"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
@@ -381,7 +381,7 @@ export function MemoryObjection() {
               {/* ── Your file ────────────────────────────────────────────── */}
               <div
                 data-col="yours"
-                className="relative flex min-w-0 flex-col rounded-md border border-signature/35 bg-paper p-6 sm:p-8 md:min-h-[60vh] lg:min-h-[66vh]"
+                className="relative flex min-w-0 flex-col rounded-md border border-signature/35 bg-paper p-6 sm:p-8 md:min-h-[52vh] lg:min-h-[56vh]"
               >
                 {/* Lift shadow lives on its own layer so the card can stay
                     unclipped — an overflow-hidden parent would eat it. */}

@@ -107,7 +107,7 @@ export function WhatItDoes() {
             <article
               key={card.index}
               data-card
-              className="rounded-md border border-line bg-white/60 p-7 shadow-[0_1px_2px_rgba(22,21,15,0.03),0_18px_44px_-28px_rgba(22,21,15,0.16)]"
+              className="rounded-[3px] border border-line bg-white/60 p-7"
             >
               <div className="flex items-center justify-between font-mono text-[10.5px] uppercase tracking-[0.22em] text-ink-faint">
                 <span>{card.index}</span>
