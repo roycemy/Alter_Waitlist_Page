@@ -108,14 +108,14 @@ export function WaitlistForm({ id }: { id?: string }) {
             }
           }}
           className={cn(
-            "h-11 border-line bg-transparent px-3.5 text-ink placeholder:text-ink-faint focus-visible:border-signature focus-visible:ring-signature/30"
+            "h-11 border-line bg-transparent px-3.5 text-ink placeholder:text-ink-faint focus-visible:border-signature focus-visible:ring-signature/30 aria-invalid:border-error aria-invalid:ring-error/25"
           )}
         />
         <p
           id={errorId}
           aria-live="polite"
           className={cn(
-            "mt-1.5 font-mono text-xs text-destructive transition-opacity",
+            "mt-1.5 font-mono text-xs text-error transition-opacity",
             status === "error" && errorMessage ? "opacity-100" : "opacity-0"
           )}
         >

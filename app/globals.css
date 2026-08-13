@@ -14,6 +14,7 @@
   --color-line: #e3e0d5;
   --color-signature: #9c451f;
   --color-signature-soft: #f7e9df;
+  --color-error: #a03018;
 
   --font-display: var(--font-instrument-serif), "Instrument Serif", serif;
   --font-body: var(--font-instrument-sans), "Instrument Sans", sans-serif;
@@ -92,6 +93,7 @@ body {
   --color-line: rgba(245, 243, 236, 0.14);
   --color-signature: #d99a70;
   --color-signature-soft: rgba(217, 154, 112, 0.14);
+  --color-error: #f2a58e;
   background-color: #17140f;
 }
 
@@ -104,6 +106,7 @@ body {
   --color-line: #e3e0d5;
   --color-signature: #9c451f;
   --color-signature-soft: #f7e9df;
+  --color-error: #a03018;
 }
 
 @theme inline {
@@ -164,7 +167,7 @@ body {
   --muted-foreground: #8b887a;
   --accent: #f7e9df;
   --accent-foreground: #9c451f;
-  --destructive: oklch(0.577 0.245 27.325);
+  --destructive: #a03018;
   --border: #e3e0d5;
   --input: #e3e0d5;
   --ring: #9c451f;

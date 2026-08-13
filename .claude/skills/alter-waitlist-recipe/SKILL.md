@@ -337,6 +337,11 @@ draft, the argument). Findings, section by section:
   position both against the SAME ancestor, then verify by measuring both
   centers in the browser — the arc dots shipped misaligned through two verifier
   rounds before being caught.
+- 2026-08-13 (pass 4): error/destructive states are invisible to load-time
+  audits (Lighthouse never sees them) — the shadcn default red survived three
+  verifier rounds until one explicitly triggered the form error. Every stateful
+  color (error, focus, disabled, success) must be tested in its TRIGGERED state
+  and belong to the token system (--color-error: #a03018 day / #f2a58e night).
 - 2026-08-13 (pass 4): a browse-daemon tab can serve a PRE-REBUILD page from
   memory even when only one tab exists and the server has new content — before
   any before/after capture, `$B reload` and assert a content marker
