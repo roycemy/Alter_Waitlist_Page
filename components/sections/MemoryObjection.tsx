@@ -301,7 +301,7 @@ export function MemoryObjection() {
                       >
                         synced · 2m ago
                       </span>
-                      <span data-sync-stale className="absolute inset-0">
+                      <span data-sync-stale aria-hidden className="absolute inset-0">
                         stale · 47d
                       </span>
                     </div>
@@ -334,7 +334,7 @@ export function MemoryObjection() {
                         >
                           {fact.stamp}
                         </span>
-                        <span data-stamp-stale className="absolute inset-0">
+                        <span data-stamp-stale aria-hidden className="absolute inset-0">
                           cleared
                         </span>
                       </span>
@@ -437,7 +437,7 @@ export function MemoryObjection() {
                         >
                           queued
                         </span>
-                        <span data-written className="absolute inset-0">
+                        <span data-written aria-hidden className="absolute inset-0">
                           written
                         </span>
                       </span>
