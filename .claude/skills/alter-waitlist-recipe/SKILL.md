@@ -106,13 +106,31 @@ Close: Alter is the file that ends that. It learns how you actually work — and
 carries it into every AI you already use.
 CTA: [email] [Join the waitlist]
 
-### 2 — Stakes
-Most AI is optimizing to agree with you. That's comfortable, and comfort doesn't
-make you better at anything. Alter is built to know your patterns well enough to
-catch the moments you're not at your best — the rushed email, the argument you're
-about to lose because you're arguing the wrong way, the draft that's technically
-fine and actually forgettable. Not by being a friend. By knowing your work well
-enough to push it further than you would alone.
+### 2 — Stakes (REWRITTEN 2026-08-13 per Yash hedge-cut directive; awaiting his
+### eyeball on the live section — previous version preserved in git history)
+Most AI is optimizing to agree with you. That's comfortable. Comfort doesn't
+make anything better. Alter is built to catch the work that slips — the rushed
+email, the argument argued the wrong way, the draft that's technically fine and
+actually forgettable. Not by being a friend. By knowing the work well enough to
+push it further than you'd take it alone.
+Rewrite rationale, sentence by sentence (vs measured reference numbers):
+- "That's comfortable, and comfort doesn't make you better at anything" (10w
+  compound) → split into a 2-word and a 6-word claim. Stated, not explained
+  (linear subhead sentences measure 5-6w).
+- "built to know your patterns well enough to catch the moments you're not at
+  your best" (18w) → "built to catch the work that slips" (9w). The old clause
+  was BOTH hedged ("well enough to") and person-pointed (banned-intent
+  violation: the AI correcting the person's weak moments). New clause points at
+  the work.
+- Recognition list: "the argument you're about to lose because you're arguing
+  the wrong way" (explained) → "the argument argued the wrong way" (stated).
+  List stays the section's single long sentence (thread precedent: one ~20w
+  sentence max per section).
+- Closer: "your work" → "the work" (output-pointed), hedge retained
+  intentionally in "well enough" as the one earned qualifier of the section.
+- Type stepped up clamp 2.4rem→3.1rem max, leading 1.38→1.3: the claim gets
+  the biggest body type on the page (directive: type steps up when the claim
+  gets bigger).
 
 ### 3 — What it actually does
 Lead: Alter reads how you already write and decide — emails, docs, the corrections

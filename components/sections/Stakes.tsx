@@ -9,16 +9,20 @@ const NIGHT_FAINT = "#8a8372";
 const NIGHT_INK = "#f5f3ec";
 
 /**
- * The paragraph, chunked at its own clause boundaries. Concatenated with
- * single spaces this is the approved copy, character for character.
+ * Rewritten 2026-08-13 per Yash's hedge-cut directive: claims ≤9 words
+ * (resend 7-10, linear 5-6, thread 4-5 measured), exactly one long sentence —
+ * the recognition list (thread precedent: one 20-word sentence max). Clause 3
+ * of the old copy pointed at the person ("moments you're not at your best");
+ * this points at the work.
  */
 const PHRASES = [
   "Most AI is optimizing to agree with you.",
-  "That's comfortable, and comfort doesn't make you better at anything.",
-  "Alter is built to know your patterns well enough to catch the moments you're not at your best —",
-  "the rushed email, the argument you're about to lose because you're arguing the wrong way, the draft that's technically fine and actually forgettable.",
+  "That's comfortable.",
+  "Comfort doesn't make anything better.",
+  "Alter is built to catch the work that slips —",
+  "the rushed email, the argument argued the wrong way, the draft that's technically fine and actually forgettable.",
   "Not by being a friend.",
-  "By knowing your work well enough to push it further than you would alone.",
+  "By knowing the work well enough to push it further than you'd take it alone.",
 ];
 
 /**
@@ -74,7 +78,7 @@ export function Stakes() {
             <div className="rule mt-6 mb-12" />
             <p
               ref={copy}
-              className="max-w-[50rem] font-display text-[clamp(1.2rem,3.1vw,2.4rem)] leading-[1.38] tracking-[-0.012em] text-ink-soft"
+              className="max-w-[54rem] font-display text-[clamp(1.5rem,3.9vw,3.1rem)] leading-[1.3] tracking-[-0.014em] text-ink-soft"
             >
               {PHRASES.map((phrase, i) => (
                 <span key={phrase} data-phrase>
