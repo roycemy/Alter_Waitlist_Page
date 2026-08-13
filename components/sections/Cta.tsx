@@ -37,7 +37,7 @@ export function Cta() {
       <Container>
         <div className="rule mb-16" />
         <div ref={block} className="mx-auto max-w-[40rem] text-center">
-          <Eyebrow index="06" label="Early access" className="justify-center" />
+          <Eyebrow index="07" label="Early access" className="justify-center" />
 
           <p className="mx-auto mt-8 max-w-[30rem] text-balance font-display text-[clamp(1.6rem,3.4vw,2.45rem)] leading-[1.24] tracking-[-0.018em] text-ink">
             Early access is going out by hand, a few people at a time.

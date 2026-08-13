@@ -8,8 +8,12 @@ chatbot, not a destination app.
 ## POSITIONING RULE (non-negotiable)
 Every line of copy must describe a **TOOL getting better**, never a **PERSON getting
 reshaped**. Banned: "partner," "second identity," "it trains you," "your nature,"
-"grows with you," "meet your Alter." Source: direct investor feedback (Josh Elman /
-a16z — flagged companion-coded language twice, unprompted). Not a taste call.
+"grows with you," "meet your Alter." Source: Yash's standing directive.
+(SOURCING CORRECTION 2026-08-13: the earlier "Josh Elman / a16z flagged it twice"
+attribution is NOT verifiable in any Granola transcript (78 meetings, Feb–Aug) or
+Drive doc — the only a16z meeting on record (Arnav Kumar, Jul 20) never discusses
+Alter. The rule stands on Yash's authority; do not cite investor validation for
+it in any deck or copy until Yash confirms the conversation existed off-record.)
 
 ## GOAL
 A waitlist landing page good enough to send to a16z partners, WHOOP, and 30 warm
@@ -88,6 +92,20 @@ copy-paste of h1 loses spaces at <br> boundaries.
 AWAITING YASH (human gates): waitlist endpoint URL → .env; first Vercel
 deploy (creates the project — needs a go); AlterHQ name/domain decision;
 final copy sign-off incl. file-card recognition rows.
+
+## MOAT SOURCING (corrected 2026-08-13 against primary transcripts)
+What the transcripts ACTUALLY support: Max Schireson (Battery, Jun 23) — thin
+wrappers are vulnerable from model companies moving up-stack and from
+incumbents who own customers + data; what matters is fit into the process, not
+owning the model. Chuck Davis (Stone Point, Jun 22) — AI could disintermediate
+incumbent advantages ("slow deer"); proprietary-data holders are the gate; his
+tone was opportunity + caution, NOT terror. What the transcripts do NOT
+support: "the moat is the accumulated personality file" as an investor quote —
+that line is Yash's own rehearsed pitch framing (Drive doc "Alter"), never said
+by Schireson. The page's moat section (05) therefore states the structural
+argument in OUR voice with zero attribution: labs need server-side data to
+train; the .alter file lives on-device and reads into any model; copying it
+means abandoning their business model.
 
 ## SOURCE OF TRUTH FOR COPY
 The tool-coded six-section script (hero / stakes / what-it-does / memory objection /

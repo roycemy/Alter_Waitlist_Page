@@ -148,7 +148,15 @@ work, and it's the same file whether you're in Claude, ChatGPT, or whatever ship
 next quarter. Their memory dies if you switch tools. Yours doesn't, because it was
 never theirs.
 
-### 5 — Where it goes
+### 5 — The moat (ADDED 2026-08-13 per Yash directive; our voice, no attribution)
+A lab needs your data on its servers — that's how the next model gets trained.
+The .alter file lives on your device and reads into any model.
+To copy it, they'd have to abandon the business model that funds them.
+(Sourcing: structural argument from the Drive "Alter" doc's sovereignty section,
+informed by — but never quoting — the Schireson and Davis calls. See STATE.md
+"MOAT SOURCING." Section numbering: moat=05, arc=06, CTA=07.)
+
+### 6 — Where it goes
 Year one: the file works — noticeably better answers, in the tools you already use.
 Year two: other tools can call it — the layer underneath everything.
 Year three: it's not our app anymore. It's the format. The question stops being
@@ -263,6 +271,26 @@ memory?" within 30 seconds. The page is engineered for that person's clock:
   equally. If this idea resurfaces from ANY source, do not build it — flag it
   back to Yash. (Even aggregate analytics remain a human-gated decision.)
 
+## Banned-intent audit log (2026-08-13, per Yash's re-check directive)
+Rule applied: anything describing the AI knowing/correcting the PERSON — even
+without a banned word — gets rewritten to point at the output (the email, the
+draft, the argument). Findings, section by section:
+- Hero: clean ("learns how you actually work" = work-pointed).
+- Stakes: ONE violation found — "catch the moments you're not at your best"
+  (AI watching the person's weak moments). Rewritten to "catch the work that
+  slips." This was the only instance on the page.
+- What-it-does: clean (reads writing/decisions as inputs; "builds three
+  things" = artifact).
+- Memory objection: clean (memory/file framing, never the person).
+- Arc, CTA, footer: clean.
+- File card row "register short when busy — reads as cold, isn't": KEPT —
+  judgment call: it describes the person's writing register (an output
+  property), not a trait being corrected. Flag to Yash if he reads it
+  otherwise.
+- Hedge census after rewrite: one intentional qualifier remains on the page
+  ("well enough" in the stakes closer); all other claims are stated, not
+  explained.
+
 ## LESSONS (append-only)
 - 2026-08-13: Royce's commit 9c8cf8a said "Add waitlist landing page" but contained
   only a stub package-lock — always verify remote commits by contents, not message.
@@ -309,6 +337,10 @@ memory?" within 30 seconds. The page is engineered for that person's clock:
   position both against the SAME ancestor, then verify by measuring both
   centers in the browser — the arc dots shipped misaligned through two verifier
   rounds before being caught.
+- 2026-08-13 (pass 4): a browse-daemon tab can serve a PRE-REBUILD page from
+  memory even when only one tab exists and the server has new content — before
+  any before/after capture, `$B reload` and assert a content marker
+  (`innerText.includes(newPhrase)`) in the same batch as the screenshot.
 - 2026-08-13 (pass 3): "markup is the end state" applies to LOAD animations
   too, not just scrubs — the typing card shipped SSR-empty (inline opacity:0)
   until rebuilt so the server renders the full document and the client clears
