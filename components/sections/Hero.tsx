@@ -122,7 +122,7 @@ export function Hero() {
             </span>
           </div>
 
-          <div data-hero-fade className="act-day mt-10">
+          <div data-hero-fade className="mt-10">
             <WaitlistForm />
           </div>
         </div>

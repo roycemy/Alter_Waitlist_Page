@@ -108,7 +108,7 @@ export function WaitlistForm({ id }: { id?: string }) {
             }
           }}
           className={cn(
-            "h-11 border-line bg-paper px-3.5 text-ink placeholder:text-ink-faint focus-visible:border-signature focus-visible:ring-signature/30"
+            "h-11 border-line bg-transparent px-3.5 text-ink placeholder:text-ink-faint focus-visible:border-signature focus-visible:ring-signature/30"
           )}
         />
         <p

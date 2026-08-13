@@ -8,10 +8,18 @@ description: Durable recipe for building and iterating the Alter waitlist page �
 Read STATE.md first. It wins on conflicts, newer Yash feedback wins over both —
 and must be propagated into BOTH files in the same pass it is given.
 
-## Brand tokens (locked for this page)
+## Brand tokens (locked for this page — UPDATED 2026-08-13, Yash rejection)
+- **BLUE IS BANNED for Alter. All of it.** Yash, verbatim reaction to the blue
+  button: "so garbage… such AI slop… why would it be blue?" Cool/saturated
+  blues are the AI-landing-page tell and mean nothing for this brand. Never
+  reintroduce blue from any source (library default, reference site, old
+  screenshot).
 - Surface: paper `#faf9f5`, deep paper `#f2f0e9`, hairlines `#e3e0d5`
-- Text: ink `#16150f`, soft `#4c4a40`, faint `#8b887a`
-- Single accent: signature blue `#2438c9` (+ wash `#eceffc`). No second accent.
+- Text: ink `#16150f`, soft `#4c4a40`, faint `#6e6a5c`
+- Single accent: warm oxide ink `#9c451f` on paper (+wash `#f7e9df`); lifts to
+  `#d99a70` on night. Meaning: fountain-pen ink — the file is written.
+- **Buttons are monochrome, never colored pills**: ink on paper acts, paper on
+  night acts. Color exists only as small marks of intent (labels, dots, ticks).
 - Type: Instrument Serif (display, italic for emphasis) / Instrument Sans (body) /
   IBM Plex Mono (file metadata, labels, timestamps)
 - The visual idea: **identity as a file.** The `.alter` file card is the motif —
@@ -231,9 +239,11 @@ memory?" within 30 seconds. The page is engineered for that person's clock:
 - **60s+ (ambition + honest scarcity):** three-year arc shows the wedge→layer→
   format ladder. CTA "going out by hand, a few people at a time" is true and
   reads as taste, never fake urgency ("limited spots" is banned).
-- **Tracking (open item, human gate):** scroll-depth + section-dwell analytics
-  (Vercel Web Analytics or Plausible) requires Yash's cost/vendor approval before
-  any signup. Ship page first; instrument after approval.
+- **NO VISITOR PROFILING (Yash, 2026-08-13, standing rule):** no fingerprinting,
+  no behavior-inferred content adaptation, no profiling visitors before they
+  act. The page earns trust by being confident and clear to every visitor
+  equally. If this idea resurfaces from ANY source, do not build it — flag it
+  back to Yash. (Even aggregate analytics remain a human-gated decision.)
 
 ## LESSONS (append-only)
 - 2026-08-13: Royce's commit 9c8cf8a said "Add waitlist landing page" but contained

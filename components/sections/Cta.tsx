@@ -43,7 +43,7 @@ export function Cta() {
             Early access is going out by hand, a few people at a time.
           </p>
 
-          <div className="act-day mt-10 flex justify-center">
+          <div className="mt-10 flex justify-center">
             <WaitlistForm id="waitlist" />
           </div>
 
