@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView, useReducedMotion } from "motion/react";
+import { useInView, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 type Row = { text: string; cls?: string };
@@ -28,36 +28,34 @@ const ROWS: Row[] = [
   { text: "network   none", cls: "text-ink-soft" },
 ];
 
+/**
+ * The .alter file — the page's proof object. SSR ships the complete card
+ * (no hidden state: JS-off and reduced-motion readers get the full document);
+ * with motion allowed, the client clears it once and types it back in, so the
+ * typing itself is the entrance.
+ */
 export function AlterFileCard() {
   const reduce = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
-  const [visible, setVisible] = useState(reduce ? ROWS.length : 0);
+  const [visible, setVisible] = useState(ROWS.length);
+  const [typing, setTyping] = useState(false);
 
   useEffect(() => {
     if (reduce) return;
-    if (!inView) return;
+    setVisible(0);
+    setTyping(true);
+  }, [reduce]);
+
+  useEffect(() => {
+    if (!typing || !inView) return;
     if (visible >= ROWS.length) return;
     const t = setTimeout(() => setVisible((v) => v + 1), visible === 0 ? 400 : 90);
     return () => clearTimeout(t);
-  }, [inView, visible, reduce]);
+  }, [typing, inView, visible]);
 
   return (
-    <motion.div
-      ref={ref}
-      initial={
-        reduce
-          ? false
-          : { opacity: 0, y: 26, scale: 0.97, filter: "blur(10px)" }
-      }
-      animate={
-        !reduce && inView
-          ? { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }
-          : undefined
-      }
-      transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1], delay: 0.38 }}
-      className="relative w-full max-w-[440px]"
-    >
+    <div ref={ref} className="relative w-full max-w-[440px]">
       {/* Sheet behind — a second page, suggesting history/versions */}
       <div className="absolute inset-0 translate-x-2.5 translate-y-2.5 rounded-md border border-line bg-paper-deep" />
 
@@ -71,17 +69,16 @@ export function AlterFileCard() {
             local
           </span>
         </div>
-        <div className="px-5 py-4 font-mono text-[12.5px] leading-[1.85]">
+        {/* min-height = 20 rows × 1.85 line-height so typing causes zero layout shift */}
+        <div className="min-h-[37em] px-5 py-4 font-mono text-[12.5px] leading-[1.85]">
           {ROWS.slice(0, visible).map((row, i) => (
             <div key={i} className={row.cls ?? "text-ink"}>
-              {row.text === "" ? " " : row.text}
+              {row.text === "" ? " " : row.text}
             </div>
           ))}
-          {!reduce && visible < ROWS.length && (
-            <span className="caret" aria-hidden />
-          )}
+          {typing && visible < ROWS.length && <span className="caret" aria-hidden />}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

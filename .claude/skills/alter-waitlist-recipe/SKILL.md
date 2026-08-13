@@ -266,3 +266,12 @@ memory?" within 30 seconds. The page is engineered for that person's clock:
 - 2026-08-13 (verifier pass 1): a locked type rule (display ≥90px) silently
   drifted to 69.6px in build — verifiers must MEASURE type against the recipe's
   numbers, and builders should treat the numbers as acceptance, not suggestion.
+- 2026-08-13 (pass 2): the browse daemon loses viewport state between command
+  batches — set `$B viewport` at the START of every capture batch, never assume
+  it carried over. Also: Lenis keeps animating after scrollTo — wait ~2s before
+  screenshotting; and a scrubbed pinned section shown "after scrolling back up"
+  is at REVERSED progress, not end state — capture end state at runway end.
+- 2026-08-13 (pass 2): headline wrap orphans at large display sizes are fixed
+  with measured manual <br> breaks + a cap the middle line actually fits at —
+  not with text-balance (fights SplitText) and not by shrinking below the scale
+  band. 88px with clean breaks beats 96px with an orphaned dash.

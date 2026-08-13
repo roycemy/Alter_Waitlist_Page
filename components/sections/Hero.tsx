@@ -27,6 +27,7 @@ export function Hero() {
           type: "words,chars",
           mask: "words",
           autoSplit: true,
+          aria: "hidden",
           onSplit(self) {
             if (played) {
               gsap.set(self.chars, { yPercent: 0, opacity: 1 });
@@ -78,6 +79,7 @@ export function Hero() {
 
           <h1
             ref={headline}
+            aria-label="AI should learn how you think — not think for you."
             className="mt-8 font-display text-[clamp(2.5rem,6.6vw,5.5rem)] leading-[0.99] tracking-[-0.018em] text-ink"
           >
             AI should learn

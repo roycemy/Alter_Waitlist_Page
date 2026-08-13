@@ -96,7 +96,7 @@ export function Arc() {
               <span
                 aria-hidden
                 data-node
-                className="absolute left-0 top-[0.45rem] block size-[9px] -translate-x-1/2 rounded-full border border-signature bg-paper"
+                className="absolute -left-8 top-[0.45rem] block size-[9px] -translate-x-1/2 rounded-full border border-signature bg-paper md:-left-12"
               />
               <p className="max-w-[44rem] font-display text-[clamp(1.3rem,2.6vw,2rem)] leading-[1.38] tracking-[-0.012em] text-ink">
                 <span className="mr-2 align-[0.12em] font-mono text-[0.55em] uppercase tracking-[0.18em] text-signature">
