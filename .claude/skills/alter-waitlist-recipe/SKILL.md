@@ -139,9 +139,12 @@ No spam, no drip campaign. One note when it's ready.
    temperature shift IS the narrative beat. Alter's version: dark hero where the
    paper-white .alter file card is the ONLY lit object → page becomes paper from
    "what it actually does" onward. CTA bookends back to dark.
-2. **Scale contrast (thread-v4, linear, vercel):** hero display ≥ 90px at 1440,
-   3 lines max, tight leading (~0.95), subhead stays 18-20px — a 5× jump with NO
-   intermediate sizes competing. Italic serif on exactly one emotional word.
+2. **Scale contrast (thread-v4, linear, vercel):** hero display ~88-96px at
+   1440 (amended 2026-08-13: orphan-free measured line breaks win ties over
+   raw size — an orphaned word or dash costs more than 7px of type), 3 lines
+   max, tight leading (~0.99 for Instrument Serif — 0.95 clips descenders),
+   subhead stays 18-20px, no intermediate sizes competing. Italic serif on
+   exactly one emotional word.
 3. **Deliberate emptiness (vercel):** >50% of the hero viewport is empty surface.
    Nothing within 120px of the headline block except the eyebrow and subhead.
 4. **Mono numbered index as section grammar (thread-v4):** `01 · VOICE` style
@@ -160,6 +163,25 @@ No spam, no drip campaign. One note when it's ready.
    bg for state language (use for their-memory vs your-file: e.g. FORGETS / YOURS).
 10. **Texture floor (thread-v4):** background texture (constellation/grain) stays
     ≤5% opacity — felt, never seen.
+
+## The finish line is a feeling (Yash, 2026-08-13 — grades above everything)
+The real test is not "does this look cool." It is: the exact person this is for
+opens it and something in them goes "wait, this is me" — caught off guard by
+how well it gets them. A beautiful page that doesn't make someone feel
+understood has failed; a plain page that makes someone feel seen has succeeded.
+- The page's recognition engines are (a) the stakes paragraph's list — rushed
+  email / argument you're losing wrong / technically-fine-forgettable draft —
+  and (b) the file card's rows. Every design decision should amplify these two;
+  nothing may compete with them.
+- Card rows must read like they were written about the visitor, not a persona.
+  Sharpen toward universal-but-specific recognitions; they are sanctioned
+  diagram labels (tool-coded, banned words apply), and changes get shown to
+  Yash before/after.
+- Before adding any effect, ask: does this make someone feel known, or just
+  make the page feel expensive? Only the first justifies build time.
+- Grade every pass with the question: "would a stranger stop scrolling and feel
+  caught off guard by how well it gets them?" If the answer isn't a yes WITH A
+  REASON, the pass isn't done.
 
 ## Trust rules (first-four-seconds — these five override everything below on conflict)
 1. **The 2-second belief:** before reading a word, a stranger must believe
@@ -229,3 +251,18 @@ memory?" within 30 seconds. The page is engineered for that person's clock:
   screenshot loop, so half the "thread-*" screenshots are actually our own page.
   Always verify `$B url` before trusting a screenshot batch; consider a
   dedicated tab per agent (`newtab`/`tab`) when parallel agents browse.
+- 2026-08-13 (verifier pass 1): next/font variables on <body> while @theme reads
+  them at :root → silent full-page Geist fallback. Font variable classNames go
+  on <html>, always.
+- 2026-08-13 (verifier pass 1): scrub sections whose elements START hidden show
+  an empty box to fast scrollers — base states must always be populated; the
+  scrub transforms character, never existence.
+- 2026-08-13 (verifier pass 1): framer-motion components need their own
+  useReducedMotion gating — gsap.matchMedia only covers GSAP. A "reduced motion
+  compliant" page means BOTH stacks are gated, plus timers (the typing effect).
+- 2026-08-13 (verifier pass 1): #8b887a mono labels on #faf9f5 = 3.4:1, a real
+  AA fail that pinned Lighthouse a11y at exactly 95. Day-act faint is #6e6a5c+.
+  Check contrast per-act whenever a token value changes.
+- 2026-08-13 (verifier pass 1): a locked type rule (display ≥90px) silently
+  drifted to 69.6px in build — verifiers must MEASURE type against the recipe's
+  numbers, and builders should treat the numbers as acceptance, not suggestion.

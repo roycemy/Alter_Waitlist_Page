@@ -15,10 +15,15 @@ export function Reveal({
   className?: string;
 }) {
   const reduce = useReducedMotion();
+
+  if (reduce) {
+    return <div className={className}>{children}</div>;
+  }
+
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: reduce ? 0 : y }}
+      initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}
@@ -37,6 +42,16 @@ export function MaskLine({
   delay?: number;
   className?: string;
 }) {
+  const reduce = useReducedMotion();
+
+  if (reduce) {
+    return (
+      <span className={`block overflow-hidden ${className ?? ""}`}>
+        <span className="block">{children}</span>
+      </span>
+    );
+  }
+
   return (
     <span className={`block overflow-hidden ${className ?? ""}`}>
       <motion.span

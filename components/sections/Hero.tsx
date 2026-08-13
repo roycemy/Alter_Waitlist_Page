@@ -71,16 +71,20 @@ export function Hero() {
   return (
     <section ref={root} className="act-night relative">
       <Container className="grid items-center gap-14 pb-[clamp(80px,11vw,120px)] pt-14 lg:grid-cols-[1.04fr_0.96fr] lg:gap-20 lg:pt-24">
-        <div className="max-w-[36rem]">
+        <div className="max-w-[40rem]">
           <div data-hero-fade>
             <Eyebrow index="01" label="The file" />
           </div>
 
           <h1
             ref={headline}
-            className="mt-8 font-display text-[clamp(2.1rem,6.2vw,4.35rem)] leading-[1.05] tracking-[-0.022em] text-ink"
+            className="mt-8 font-display text-[clamp(2.5rem,6.6vw,5.5rem)] leading-[0.99] tracking-[-0.018em] text-ink"
           >
-            AI should learn how you <em>think</em> — not think for you.
+            AI should learn
+            <br />
+            how you <em>think</em> —
+            <br />
+            not think for you.
           </h1>
 
           <p
@@ -100,6 +104,21 @@ export function Hero() {
             Alter is the file that ends that. It learns how you actually work —
             and carries it into every AI you already use.
           </p>
+
+          <div
+            data-hero-fade
+            className="act-day mt-6 flex min-h-10 w-full flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-sm border border-line bg-paper px-4 py-2 font-mono text-[11px] lg:hidden"
+          >
+            <span className="text-signature">you.alter</span>
+            <span className="text-ink-soft">voice · reasoning · decisions</span>
+            <span className="flex items-center gap-1.5 text-ink-faint">
+              <span
+                aria-hidden
+                className="inline-block size-1.5 rounded-full bg-signature"
+              />
+              local
+            </span>
+          </div>
 
           <div data-hero-fade className="act-day mt-10">
             <WaitlistForm />

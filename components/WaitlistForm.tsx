@@ -125,7 +125,7 @@ export function WaitlistForm({ id }: { id?: string }) {
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="h-11 shrink-0 rounded-sm px-5 text-sm font-medium"
+        className="h-11 shrink-0 rounded-full px-6 text-sm font-medium"
       >
         {isSubmitting ? "Joining…" : "Join the waitlist"}
       </Button>

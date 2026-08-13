@@ -20,6 +20,12 @@ colleague.
 ## Lighthouse runs, never descriptions; supersedes the v1 list)
 North star: a stranger lands not knowing what Alter is; by the bottom they get
 it, believe it's real, and want in.
+THE OVERRIDING TEST (Yash, 2026-08-13): the finish line is a FEELING, not a
+feature list. Does the exact person this is for stop scrolling and feel caught
+off guard by how well it gets them — "wait, this is me"? A beautiful page that
+doesn't make someone feel understood has failed. Grade every pass against this
+first; the recognition engines are the stakes list and the file-card rows
+(see recipe skill "The finish line is a feeling").
 
 THE FEELING (screenshot + honest read):
 1. First four seconds feel expensive and considered — nothing reads as a

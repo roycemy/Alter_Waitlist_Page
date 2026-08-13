@@ -83,7 +83,7 @@ export function WhatItDoes() {
   return (
     <section
       ref={root}
-      className="relative py-[clamp(80px,11vw,120px)]"
+      className="relative py-[clamp(64px,8vw,96px)]"
     >
       <Container>
         <div data-lift>
@@ -91,13 +91,13 @@ export function WhatItDoes() {
         </div>
         <div className="rule mt-6 mb-12" />
 
-        <p
+        <h2
           data-lift
           className="max-w-[42rem] font-display text-[clamp(1.35rem,2.5vw,1.95rem)] leading-[1.4] tracking-[-0.012em] text-ink"
         >
           Alter reads how you already write and decide — emails, docs, the
           corrections you make to AI output — and builds three things:
-        </p>
+        </h2>
 
         <div
           ref={grid}

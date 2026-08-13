@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "motion/react";
+import { motion, useInView, useReducedMotion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 type Row = { text: string; cls?: string };
@@ -13,8 +13,8 @@ const ROWS: Row[] = [
   { text: "" },
   { text: "voice", cls: "text-signature" },
   { text: "  uses      “ship it” · “the real question is”" },
-  { text: "  avoids    “synergy” · “circle back”" },
-  { text: "  register  direct with your team, warmer with friends" },
+  { text: "  avoids    “synergy” · “circle back” · exclamation points" },
+  { text: "  register  short when busy — reads as cold, isn’t" },
   { text: "" },
   { text: "reasoning", cls: "text-signature" },
   { text: "  argues    data first, analogy second" },
@@ -29,23 +29,31 @@ const ROWS: Row[] = [
 ];
 
 export function AlterFileCard() {
+  const reduce = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
-  const [visible, setVisible] = useState(0);
+  const [visible, setVisible] = useState(reduce ? ROWS.length : 0);
 
   useEffect(() => {
+    if (reduce) return;
     if (!inView) return;
     if (visible >= ROWS.length) return;
     const t = setTimeout(() => setVisible((v) => v + 1), visible === 0 ? 400 : 90);
     return () => clearTimeout(t);
-  }, [inView, visible]);
+  }, [inView, visible, reduce]);
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 26, scale: 0.97, filter: "blur(10px)" }}
+      initial={
+        reduce
+          ? false
+          : { opacity: 0, y: 26, scale: 0.97, filter: "blur(10px)" }
+      }
       animate={
-        inView ? { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" } : undefined
+        !reduce && inView
+          ? { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }
+          : undefined
       }
       transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1], delay: 0.38 }}
       className="relative w-full max-w-[440px]"
@@ -69,7 +77,7 @@ export function AlterFileCard() {
               {row.text === "" ? " " : row.text}
             </div>
           ))}
-          {visible < ROWS.length && (
+          {!reduce && visible < ROWS.length && (
             <span className="caret" aria-hidden />
           )}
         </div>

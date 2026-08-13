@@ -67,7 +67,7 @@ export function Stakes() {
 
   return (
     <section ref={root} className="act-night relative">
-      <div ref={runway} className="h-[190vh] md:h-[215vh]">
+      <div ref={runway} className="h-[150vh] md:h-[170vh]">
         <div className="sticky top-0 flex min-h-[100svh] items-center py-16 md:py-24">
           <Container>
             <Eyebrow index="02" label="The stakes" />
