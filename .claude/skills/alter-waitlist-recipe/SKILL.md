@@ -275,3 +275,13 @@ memory?" within 30 seconds. The page is engineered for that person's clock:
   with measured manual <br> breaks + a cap the middle line actually fits at —
   not with text-balance (fights SplitText) and not by shrinking below the scale
   band. 88px with clean breaks beats 96px with an orphaned dash.
+- 2026-08-13 (pass 3): two absolutely-positioned siblings both using left-0 can
+  sit 47px apart when their positioning contexts differ (padding box of the
+  padded track vs content box of an inner relative div). Rail-and-node layouts:
+  position both against the SAME ancestor, then verify by measuring both
+  centers in the browser — the arc dots shipped misaligned through two verifier
+  rounds before being caught.
+- 2026-08-13 (pass 3): "markup is the end state" applies to LOAD animations
+  too, not just scrubs — the typing card shipped SSR-empty (inline opacity:0)
+  until rebuilt so the server renders the full document and the client clears
+  and retypes it as the entrance. JS-off/no-hydration is a first-class reader.

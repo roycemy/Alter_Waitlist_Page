@@ -75,6 +75,20 @@ loud console error when unset, never fake success. **Endpoint URL = HUMAN GATE.*
 - Domain / name decision (AlterHQ collision — rebrand question is open)
 - Anything that ships to production. Preview deploys only, and only with explicit ship.
 
+## STATUS (2026-08-13, end of autonomous loop)
+Round-2 fresh-context verifier: SHIP. All non-gated criteria green on
+measurement (hero 88px/3 lines, two-fates scrub confirmed as the screenshot
+moment, Lighthouse mobile 93 perf / 96 a11y, copy 16/16 verbatim, zero banned
+words, zero overflow, six distinct entrances, reduced-motion + JS-off both
+render complete). Ship blockers fixed post-verdict: arc nodes on rail
+(measured 194=194), SSR-complete file card (no inline opacity:0), h1
+aria-label. main = 82f6ee7. Known deferred: mobile two-fates is sequential
+(never both cards in one frame); 66vh panels slightly hollow at 1440;
+copy-paste of h1 loses spaces at <br> boundaries.
+AWAITING YASH (human gates): waitlist endpoint URL → .env; first Vercel
+deploy (creates the project — needs a go); AlterHQ name/domain decision;
+final copy sign-off incl. file-card recognition rows.
+
 ## SOURCE OF TRUTH FOR COPY
 The tool-coded six-section script (hero / stakes / what-it-does / memory objection /
 three-year arc / CTA) — stored verbatim in .claude/skills/alter-waitlist-recipe/SKILL.md.
