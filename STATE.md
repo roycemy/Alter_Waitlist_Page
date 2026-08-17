@@ -76,8 +76,9 @@ ONE file object, not a 3-card features grid; 7) arc = manifesto typography
 (huge year labels, editorial prose, no timeline-dot roadmap UI).
 DON'T TOUCH (Royce, explicit): the palette + temperature shift; the
 typography (display is Instrument Serif — Royce wrote "Fraunces" in error);
-the two-fates section (the model for everything); the moat copy; the .alter
-file as central metaphor.
+~~the two-fates section~~ (REMOVED by Yash 2026-08-17 — overrides Royce's
+don't-touch); the moat copy (superseded by the incentive rewrite, Yash-driven);
+the .alter file as central metaphor (demoted: card = step-02 output, not hero).
 
 ## ACCEPTANCE CRITERIA (v2, set 2026-08-13 — grade against real screenshots +
 ## Lighthouse runs, never descriptions; supersedes the v1 list)
@@ -96,8 +97,9 @@ THE FEELING (screenshot + honest read):
 2. A stranger could explain Alter in one sentence after only the hero.
 3. The "isn't this just ChatGPT memory?" doubt is answered before they'd think
    to ask it — never after, never buried.
-4. Exactly ONE screenshot moment on the page, named before building: "The two
-   fates" (memory-objection contrast — their column decays, your file persists).
+4. Exactly ONE screenshot moment on the page: the push demo (04). (Was "The
+   two fates" — Yash killed that section 2026-08-17: "i hate it… the thing to
+   remove." Never rebuild it.)
 5. Zero fake urgency / fake numbers / fake scarcity. Confidence, not pressure.
 
 THE CRAFT (real screenshots at 1440/768/390):
