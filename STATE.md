@@ -138,7 +138,16 @@ loud console error when unset, never fake success. **Endpoint URL = HUMAN GATE.*
 - Domain / name decision (AlterHQ collision — rebrand question is open)
 - Anything that ships to production. Preview deploys only, and only with explicit ship.
 
-## STATUS (2026-08-17 night, TEARDOWN pass — supersedes both blocks below)
+## STATUS (2026-08-17 night, cut pass — supersedes all blocks below)
+Yash on the two-fates section (05): "is bs… i hate it… that's the thing to
+remove." REMOVED ENTIRELY — MemoryObjection.tsx deleted, sections renumbered
+(moat 05, arc 06, CTA 07). The two-fates is NO LONGER the wow moment and NO
+LONGER protected — that rule is DEAD; the push demo (04) is the page's proof
+moment. Memory objection now answered by the hero "Vs memory" note + the
+moat. Page is 7 sections: hero / stakes / the build / the push / moat / arc
+/ early access.
+
+## STATUS (2026-08-17 night, TEARDOWN pass — superseded)
 Yash rejected the surgical repositioning twice ("so shit" / "so bad") — the
 lesson (also in recipe LESSONS): two rejections mean the ask was a teardown,
 not a tweak. Shipped: hero = "AI has *amnesia*. Alter is the fix." (his own

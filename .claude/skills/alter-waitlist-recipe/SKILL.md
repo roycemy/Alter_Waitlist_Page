@@ -387,3 +387,11 @@ draft, the argument). Findings, section by section:
   (hero line → his own call one-liner "AI has amnesia. Alter is the fix.";
   "X. Alter fixes that." was thousand-YC-pages cadence). Show the product
   flow (talk → compile → attach) instead of describing the artifact.
+- 2026-08-17 (cut pass): THE TWO-FATES SECTION IS DEAD — Yash: "is bs… i hate
+  it… that's the thing to remove." This INVERTS the earlier "one wow moment =
+  The two fates" trust rule: the push demo (04) is now the page's single
+  proof moment. Do not rebuild a side-by-side memory-decay diagram. Root
+  flaw for the record: both panels carried IDENTICAL rows, so any mid-scrub
+  screenshot showed two same tables arguing nothing — and the panels bled
+  off-viewport at wide widths. A scrub section must read as an argument at
+  EVERY frozen frame, or it doesn't ship.

@@ -3,7 +3,6 @@ import { Hero } from "@/components/sections/Hero";
 import { Stakes } from "@/components/sections/Stakes";
 import { TheBuild } from "@/components/sections/TheBuild";
 import { PushDemo } from "@/components/sections/PushDemo";
-import { MemoryObjection } from "@/components/sections/MemoryObjection";
 import { Moat } from "@/components/sections/Moat";
 import { Arc } from "@/components/sections/Arc";
 import { Cta } from "@/components/sections/Cta";
@@ -18,7 +17,6 @@ export default function Page() {
         <Stakes />
         <TheBuild />
         <PushDemo />
-        <MemoryObjection />
         <Moat />
         <Arc />
         <Cta />

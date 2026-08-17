@@ -62,7 +62,7 @@ export function Arc() {
   return (
     <section ref={root} className="relative py-[clamp(80px,11vw,120px)]">
       <Container>
-        <Eyebrow index="07" label="Where it goes" />
+        <Eyebrow index="06" label="Where it goes" />
         <div className="rule mt-6 mb-14" />
 
         <div ref={track}>

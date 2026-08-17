@@ -37,7 +37,7 @@ export function Cta() {
       <Container>
         <div className="rule mb-16" />
         <div ref={block} className="mx-auto max-w-[44rem] text-center">
-          <Eyebrow index="08" label="Early access" className="justify-center" />
+          <Eyebrow index="07" label="Early access" className="justify-center" />
 
           {/*
             YASH GATE: enable only if the numbers are true. Do not ship until
