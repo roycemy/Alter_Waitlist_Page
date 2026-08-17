@@ -384,7 +384,7 @@ export function PushDemo() {
             data-caption
             className="mt-6 font-mono text-[10.5px] uppercase tracking-[0.18em] text-ink-faint"
           >
-            same input · two systems
+            same input · two systems · composed illustration, not a live run
           </p>
         </div>
       </Container>

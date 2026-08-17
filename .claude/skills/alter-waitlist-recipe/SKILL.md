@@ -198,6 +198,13 @@ No spam, no drip campaign. One note when it's ready.
 10. **Texture floor (thread-v4):** background texture (constellation/grain) stays
     ≤5% opacity — felt, never seen.
 
+## Show, don't tell (Yash, 2026-08-17 — standing rule, grades with the feeling test)
+Every section must show, not tell; a section that only describes what Alter
+stores has not earned its scroll. HONESTY GATE: demos/comparisons are either
+real executed runs labeled as such, or visibly labeled illustrations — never
+an authored strawman presented as a real comparison. HUMAN GATE: access
+counts and reply promises are Yash's commitments, never invented copy.
+
 ## The finish line is a feeling (Yash, 2026-08-13 — grades above everything)
 The real test is not "does this look cool." It is: the exact person this is for
 opens it and something in them goes "wait, this is me" — caught off guard by

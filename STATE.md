@@ -20,6 +20,15 @@ A waitlist landing page good enough to send to a16z partners, WHOOP, and 30 warm
 intros without embarrassment. Bar: a partner screenshots it and sends it to a
 colleague.
 
+## STANDING RULE (2026-08-17, Yash, non-negotiable): SHOW, DON'T TELL
+Every section must show, not tell; a section that only describes what Alter
+stores has not earned its scroll. Corollaries: (a) HONESTY GATE — any
+comparison/demo either comes from a real executed run and says so, or is
+visibly labeled as an illustration; authoring a deliberately weak "generic AI"
+response and presenting it as a real comparison is banned (a strawman is worse
+than no section). (b) HUMAN GATE — access counts and reply promises are
+commitments Yash keeps, never copy we invent; build slots, hand him the blanks.
+
 ## GOAL v3 (2026-08-17, from Royce's design doc, Yash-approved: "refine based on
 ## this document") — overrides where it conflicts with v2 below
 Core diagnosis: the page explains what Alter IS, never shows what it DOES.
