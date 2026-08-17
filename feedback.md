@@ -5,7 +5,7 @@ metadata:
   node_type: memory
   type: feedback
   originSessionId: c332c6be-e44d-40f0-af6a-ea21c39ce5c2
-  modified: 2026-08-17T22:20:53.014Z
+  modified: 2026-08-17T22:33:34.038Z
 ---
 
 # Alter feedback file (extracted from full session, 2026-08-12 → 2026-08-17)
@@ -45,6 +45,24 @@ sessions; newer feedback overrides older. Repo source of truth: `Alter_Waitlist_
 - The feeling test outranks polish: "wait, this is me" beats "looks expensive."
   Recognition engines: the stakes claims + the card rows ("register short when
   busy — reads as cold, isn't").
+
+## Amplification register (2026-08-17, supersedes/extends positioning rule)
+- Josh Elman's line, now CONFIRMED via his emails (Yash relayed 2026-08-17):
+  AI that amplifies a real person = good; AI that simulates being human = his
+  uncanny valley. Sentence test: tool or fake friend? Fake friend → cut.
+- Danger→safe swaps: "second identity"→"your context, attached to any model";
+  "partner as good as you"→"ChatGPT writes like you, not like everyone";
+  "pushes you like a partner"→"spots your patterns before you do"; "living
+  model of you"→"a file you own that travels between tools"; "Alter knows
+  you"→"Alter carries your context"; "companion" never. Josh/a16z never named
+  in public copy.
+- The page sells the OUTCOME, never the noun — "the card is bs, not the
+  product anymore" (visual stays; it's the personality card, the carrier).
+- Product truth (Jul 21–29 calls): one-liner "AI has amnesia. Alter is the
+  fix."; three layers input→identity(kernel)→outcome; extension is a pipe;
+  MVP = <10-min onboarding → downloadable profile card. Lab-question answer
+  to have cold: each lab's memory improves only its own app; none will build
+  the layer that improves a competitor; Alter answers to no lab.
 
 ## Honesty & trust gates (non-negotiable, flag to Yash rather than decide)
 - **HONESTY GATE:** any demo/comparison is either a real executed run labeled as
