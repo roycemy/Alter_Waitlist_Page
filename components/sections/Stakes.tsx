@@ -11,14 +11,12 @@ import { EASE, NO_REDUCED_MOTION, gsap, useGSAP } from "./gsap-setup";
  * of the old copy pointed at the person ("moments you're not at your best");
  * this points at the work.
  */
+/* Cut 2026-08-17 per Yash: the "catch the work that slips" run removed —
+   the push demo (04) now does that job by showing it. */
 const PHRASES = [
   "Most AI is optimizing to agree with you.",
   "That's comfortable.",
   "Comfort doesn't make anything better.",
-  "Alter is built to catch the work that slips —",
-  "the rushed email, the argument argued the wrong way, the draft that's technically fine and actually forgettable.",
-  "Not by being a friend.",
-  "By knowing the work well enough to push it further than you'd take it alone.",
 ];
 
 /**

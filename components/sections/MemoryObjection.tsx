@@ -474,10 +474,9 @@ export function MemoryObjection() {
           data-answer
           className="mt-16 max-w-[42rem] text-[16.5px] leading-[1.7] text-ink-soft md:mt-20"
         >
-          Theirs remembers what you told it, inside one app. Alter learns how you
-          actually work, and it&apos;s the same file whether you&apos;re in
-          Claude, ChatGPT, or whatever ships next quarter. Their memory dies if
-          you switch tools. Yours doesn&apos;t, because it was never theirs.
+          Theirs remembers what you told it, inside one app. Yours is a file —
+          the same file in Claude, ChatGPT, whatever ships next. Their memory
+          dies when you switch. Yours doesn&apos;t. It was never theirs.
         </p>
       </Container>
     </section>

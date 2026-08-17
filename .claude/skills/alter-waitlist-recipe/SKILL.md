@@ -96,6 +96,11 @@ and must be propagated into BOTH files in the same pass it is given.
   just", "not just", "empower", "game-changer". No fake urgency, no "limited spots."
 
 ## Approved copy (verbatim)
+(TIGHTENED 2026-08-17 per Yash live direction "tight blunt bold": stakes cut to
+its first three claims — the recognition list moved out, the push demo carries
+that job; hero body/close, what-it-does lead/close, and the objection answer
+all shortened. The rendered components are now the copy source of truth for
+those blocks; the blocks below preserve the pre-cut wording for history.)
 
 ### 1 — Hero
 H1: AI should learn how you think — not think for you.

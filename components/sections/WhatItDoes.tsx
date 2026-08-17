@@ -131,8 +131,7 @@ export function WhatItDoes() {
           data-lift
           className="max-w-[42rem] font-display text-[clamp(1.35rem,2.5vw,1.95rem)] leading-[1.4] tracking-[-0.012em] text-ink"
         >
-          Alter reads how you already write and decide — emails, docs, the
-          corrections you make to AI output — and builds three things:
+          Alter reads how you write and decide. It builds three things:
         </h2>
 
         {/* ── The file object ─────────────────────────────────────────────── */}
@@ -200,9 +199,8 @@ export function WhatItDoes() {
           data-close
           className="mt-14 max-w-[38rem] text-[16.5px] leading-[1.68] text-ink-soft"
         >
-          It compiles into one file. Yours. Not stored on our servers, not sold,
-          not shared, not trained on. Delete it whenever you want. If you leave,
-          it leaves with you.
+          One file. Yours. Never on our servers, never sold, never trained on.
+          Leave, and it leaves with you.
         </p>
       </Container>
     </section>

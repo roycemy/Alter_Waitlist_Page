@@ -109,18 +109,16 @@ export function Hero() {
             data-hero-fade
             className="mt-8 max-w-[34rem] text-[16.5px] leading-[1.68] text-ink-soft"
           >
-            Every AI you use forgets you the second you close the tab. Switch
-            models, start over. You&apos;re spending the first ten minutes of
-            every conversation re-explaining who you are before you can ask the
-            real question.
+            Every AI forgets you the second you close the tab. Switch models,
+            start over.
           </p>
 
           <p
             data-hero-fade
             className="mt-5 max-w-[34rem] text-[16.5px] leading-[1.68] text-ink"
           >
-            Alter is the file that ends that. It learns how you actually work —
-            and carries it into every AI you already use.
+            Alter ends that. One file. It learns how you work and carries it
+            into every AI you use.
           </p>
 
           <div
