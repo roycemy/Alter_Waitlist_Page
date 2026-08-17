@@ -74,7 +74,7 @@ export function Arc() {
             >
               <div className="overflow-hidden">
                 <div data-year-inner>
-                  <p className="font-mono text-[11px] uppercase tracking-wide text-signature">
+                  <p className="font-mono text-[clamp(0.85rem,1.5vw,1.15rem)] uppercase tracking-[0.28em] text-signature">
                     {step.label.replace(":", "")}
                   </p>
                   <p className="mt-4 max-w-[46rem] font-display text-[clamp(1.6rem,3.4vw,2.6rem)] leading-[1.25] tracking-[-0.014em] text-ink">

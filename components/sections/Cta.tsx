@@ -47,6 +47,8 @@ export function Cta() {
             Royce-draft alternative copy (specificity + reply-time promise):
             Specificity line: "We're letting in fifty people this month."
             Reply-time promise: "We'll write back within a week."
+            Softer human-promise (also gated, verifier flagged as unconfirmed):
+            "Every access note is written by a person."
           */}
 
           <p className="mx-auto mt-10 max-w-[34rem] text-balance font-display text-[clamp(2.2rem,4.8vw,3.6rem)] leading-[1.15] tracking-[-0.02em] text-ink">
@@ -54,8 +56,7 @@ export function Cta() {
           </p>
 
           <p className="mx-auto mt-6 max-w-[30rem] text-[16.5px] leading-[1.68] text-ink-soft">
-            Invite-only while the file is young. Every access note is written
-            by a person.
+            Invite-only while the file is young.
           </p>
 
           <div className="mt-12 flex justify-center">

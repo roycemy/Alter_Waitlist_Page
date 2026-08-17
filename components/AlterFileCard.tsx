@@ -124,6 +124,9 @@ export function AlterFileCard() {
         type="button"
         aria-pressed={open}
         onClick={() => setOpen((v) => !v)}
+        onKeyDown={(e) => {
+          if (e.key === "Escape" && open) setOpen(false);
+        }}
         className="peer absolute inset-0 z-10 cursor-pointer rounded-md focus-visible:[outline:2px_solid_var(--color-signature)] focus-visible:[outline-offset:6px]"
       >
         <span className="sr-only">
