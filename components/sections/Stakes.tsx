@@ -1,12 +1,8 @@
 "use client";
 
-import { useRef } from "react";
+import { Fragment, useRef } from "react";
 import { Container, Eyebrow } from "./kit";
-import { NO_REDUCED_MOTION, gsap, useGSAP } from "./gsap-setup";
-
-/* Night-act scrub endpoints — mirror .act-night tokens in globals.css. */
-const NIGHT_FAINT = "#8a8372";
-const NIGHT_INK = "#f5f3ec";
+import { EASE, NO_REDUCED_MOTION, gsap, useGSAP } from "./gsap-setup";
 
 /**
  * Rewritten 2026-08-13 per Yash's hedge-cut directive: claims ≤9 words
@@ -26,13 +22,23 @@ const PHRASES = [
 ];
 
 /**
- * Stakes — the scroll moment. The section holds still while the sentence
- * darkens clause by clause against the scroll position. Base state is
- * ink-soft, so with JS off or reduced motion on the paragraph reads normally.
+ * Stakes — compressed 2026-08-17 per Royce's doc (P5): the sticky 150/170vh
+ * runway and pinned scroll-scrub cost more scroll tax than the section earns,
+ * especially once the push-demo section gives the page its real wow moment.
+ * This is now a compact, non-sticky band. The recognition list (this
+ * paragraph) is one of the page's two "feel-seen" engines per STATE.md — it
+ * must read instantly, at rest, with no scroll gesture required.
+ *
+ * Base state is markup-is-end-state: every phrase is fully readable at
+ * text-ink-soft with zero animation applied (JS-off / reduced-motion both
+ * land here). The last two phrases pin to the explicit #c7c1b2 tier rather
+ * than the text-ink-faint token — ink-faint's night value (#8a8372) risks
+ * dropping below AA at this weight; #c7c1b2 is the measured-safe floor and
+ * happens to equal the section's own ink-soft base, so it can never go
+ * dimmer than the rest of the paragraph.
  */
 export function Stakes() {
   const root = useRef<HTMLElement>(null);
-  const runway = useRef<HTMLDivElement>(null);
   const copy = useRef<HTMLParagraphElement>(null);
 
   useGSAP(
@@ -45,22 +51,18 @@ export function Stakes() {
           copy.current,
         );
 
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: runway.current,
-            start: "top 55%",
-            end: "bottom bottom",
-            scrub: 0.6,
-          },
-        });
-
-        phrases.forEach((phrase, i) => {
-          tl.fromTo(
-            phrase,
-            { color: NIGHT_FAINT },
-            { color: NIGHT_INK, ease: "none", duration: 1 },
-            i === 0 ? 0 : "<0.62",
-          );
+        // Once-on-scroll stagger, distinct from the hero's per-character
+        // cascade and the what-it-does cards' rise-with-rotation: whole
+        // phrases rise 18px and unblur together, 0.08s apart.
+        gsap.from(phrases, {
+          y: 18,
+          filter: "blur(8px)",
+          opacity: 0,
+          duration: 0.8,
+          ease: EASE,
+          stagger: 0.08,
+          clearProps: "filter",
+          scrollTrigger: { trigger: copy.current, start: "top 82%" },
         });
       });
 
@@ -70,26 +72,34 @@ export function Stakes() {
   );
 
   return (
-    <section ref={root} className="act-night relative">
-      <div ref={runway} className="h-[150vh] md:h-[170vh]">
-        <div className="sticky top-0 flex min-h-[100svh] items-center py-16 md:py-24">
-          <Container>
-            <Eyebrow index="02" label="The stakes" />
-            <div className="rule mt-6 mb-12" />
-            <p
-              ref={copy}
-              className="max-w-[54rem] font-display text-[clamp(1.5rem,3.9vw,3.1rem)] leading-[1.3] tracking-[-0.014em] text-ink-soft"
-            >
-              {PHRASES.map((phrase, i) => (
-                <span key={phrase} data-phrase>
-                  {phrase}
-                  {i < PHRASES.length - 1 ? " " : ""}
-                </span>
-              ))}
-            </p>
-          </Container>
-        </div>
-      </div>
+    <section
+      ref={root}
+      className="act-night relative py-[clamp(72px,9vw,110px)]"
+    >
+      <Container>
+        <Eyebrow index="02" label="The stakes" />
+        <div className="rule mt-6 mb-12" />
+        <p
+          ref={copy}
+          className="max-w-[54rem] font-display text-[clamp(1.5rem,3.9vw,3.1rem)] leading-[1.3] tracking-[-0.014em] text-ink-soft"
+        >
+          {PHRASES.map((phrase, i) => (
+            <Fragment key={phrase}>
+              <span
+                data-phrase
+                className={
+                  i >= PHRASES.length - 2
+                    ? "inline-block text-[#c7c1b2]"
+                    : "inline-block"
+                }
+              >
+                {phrase}
+              </span>
+              {i < PHRASES.length - 1 ? " " : ""}
+            </Fragment>
+          ))}
+        </p>
+      </Container>
     </section>
   );
 }

@@ -257,7 +257,7 @@ export function MemoryObjection() {
   return (
     <section ref={root} className="relative py-[clamp(80px,11vw,120px)]">
       <Container>
-        <Eyebrow index="04" label="The objection" />
+        <Eyebrow index="05" label="The objection" />
         <div className="rule mt-6 mb-12" />
 
         <div className="overflow-hidden pb-[0.18em]">

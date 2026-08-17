@@ -33,21 +33,38 @@ export function Cta() {
   );
 
   return (
-    <section ref={root} className="act-night relative py-[clamp(96px,13vw,150px)]">
+    <section ref={root} className="act-night relative py-[clamp(110px,14vw,170px)]">
       <Container>
         <div className="rule mb-16" />
-        <div ref={block} className="mx-auto max-w-[40rem] text-center">
-          <Eyebrow index="07" label="Early access" className="justify-center" />
+        <div ref={block} className="mx-auto max-w-[44rem] text-center">
+          <Eyebrow index="08" label="Early access" className="justify-center" />
 
-          <p className="mx-auto mt-8 max-w-[30rem] text-balance font-display text-[clamp(1.6rem,3.4vw,2.45rem)] leading-[1.24] tracking-[-0.018em] text-ink">
+          {/*
+            YASH GATE: enable only if the numbers are true. Do not ship until
+            Yash confirms an actual scarcity count and reply-time promise —
+            trust rule 5 (calm, never pressure) forbids invented numbers.
+
+            Royce-draft alternative copy (specificity + reply-time promise):
+            Specificity line: "We're letting in fifty people this month."
+            Reply-time promise: "We'll write back within a week."
+          */}
+
+          <p className="mx-auto mt-10 max-w-[34rem] text-balance font-display text-[clamp(2.2rem,4.8vw,3.6rem)] leading-[1.15] tracking-[-0.02em] text-ink">
             Early access is going out by hand, a few people at a time.
           </p>
 
-          <div className="mt-10 flex justify-center">
-            <WaitlistForm id="waitlist" />
+          <p className="mx-auto mt-6 max-w-[30rem] text-[16.5px] leading-[1.68] text-ink-soft">
+            Invite-only while the file is young. Every access note is written
+            by a person.
+          </p>
+
+          <div className="mt-12 flex justify-center">
+            <div className="mx-auto w-full max-w-[34rem] [&>form]:max-w-full [&_button]:h-14 [&_button]:px-8 [&_button]:text-base [&_input]:h-14 [&_input]:px-4 [&_input]:text-base">
+              <WaitlistForm id="waitlist" />
+            </div>
           </div>
 
-          <p className="mt-6 font-mono text-[11.5px] leading-[1.7] text-ink-faint">
+          <p className="mt-8 font-mono text-[11.5px] leading-[1.7] text-ink-faint">
             No spam, no drip campaign. One note when it&apos;s ready.
           </p>
         </div>

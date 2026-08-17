@@ -20,8 +20,13 @@ const STEPS = [
 ];
 
 /**
- * Where it goes — a vertical rule draws downward against the scroll, tying the
- * three years together as it passes each node.
+ * Where it goes — rebuilt 2026-08-17 per Royce's doc (P7): manifesto, not
+ * roadmap. The timeline rail + dots read as product-roadmap UI; this is a
+ * founding document instead. Each year is a standalone block: a huge mono
+ * year label stands alone above the statement (the "Year one:" prefix from
+ * the approved copy becomes the label — the words themselves are unchanged),
+ * then the statement itself sets in display serif, large enough to read as
+ * something declared rather than scheduled.
  */
 export function Arc() {
   const root = useRef<HTMLElement>(null);
@@ -32,44 +37,20 @@ export function Arc() {
       const mm = gsap.matchMedia();
 
       mm.add(NO_REDUCED_MOTION, () => {
-        const line = track.current?.querySelector("[data-line]") ?? [];
-        gsap.fromTo(
-          line,
-          { scaleY: 0 },
-          {
-            scaleY: 1,
-            ease: "none",
-            scrollTrigger: {
-              trigger: track.current,
-              start: "top 66%",
-              end: "bottom 82%",
-              scrub: 0.5,
-            },
-          },
-        );
-
-        const items = gsap.utils.toArray<HTMLElement>(
-          "[data-step]",
+        // Masked-line reveal, staggered block to block — distinct from the
+        // moat's left-slide stagger and the CTA's single fade-up. The mask
+        // (overflow-hidden parent) stays untransformed so ScrollTrigger
+        // measures a stable box; only the inner wrapper travels.
+        const inners = gsap.utils.toArray<HTMLElement>(
+          "[data-year-inner]",
           track.current,
         );
-        items.forEach((item) => {
-          gsap.from(item, {
-            y: 26,
-            opacity: 0,
-            duration: 0.85,
-            ease: EASE,
-            scrollTrigger: { trigger: item, start: "top 84%" },
-          });
-          const node = item.querySelector("[data-node]");
-          if (node) {
-            gsap.from(node, {
-              scale: 0.2,
-              opacity: 0,
-              duration: 0.6,
-              ease: "back.out(2)",
-              scrollTrigger: { trigger: item, start: "top 84%" },
-            });
-          }
+        gsap.from(inners, {
+          yPercent: 110,
+          duration: 0.9,
+          ease: EASE,
+          stagger: 0.18,
+          scrollTrigger: { trigger: track.current, start: "top 78%" },
         });
       });
 
@@ -81,29 +62,26 @@ export function Arc() {
   return (
     <section ref={root} className="relative py-[clamp(80px,11vw,120px)]">
       <Container>
-        <Eyebrow index="06" label="Where it goes" />
+        <Eyebrow index="07" label="Where it goes" />
         <div className="rule mt-6 mb-14" />
 
-        <div ref={track} className="relative pl-8 md:pl-12">
-          <span
-            aria-hidden
-            data-line
-            className="absolute left-0 top-[0.7rem] block h-[calc(100%-1.6rem)] w-px origin-top bg-line"
-          />
-
-          {STEPS.map((step) => (
-            <div key={step.label} data-step className="relative pb-14 last:pb-0">
-              <span
-                aria-hidden
-                data-node
-                className="absolute -left-8 top-[0.45rem] block size-[9px] -translate-x-1/2 rounded-full border border-signature bg-paper md:-left-12"
-              />
-              <p className="max-w-[44rem] font-display text-[clamp(1.3rem,2.6vw,2rem)] leading-[1.38] tracking-[-0.012em] text-ink">
-                <span className="mr-2 align-[0.12em] font-mono text-[0.55em] uppercase tracking-[0.18em] text-signature">
-                  {step.label}
-                </span>{" "}
-                {step.body}
-              </p>
+        <div ref={track}>
+          {STEPS.map((step, i) => (
+            <div
+              key={step.label}
+              data-year
+              className={i > 0 ? "mt-16" : undefined}
+            >
+              <div className="overflow-hidden">
+                <div data-year-inner>
+                  <p className="font-mono text-[11px] uppercase tracking-wide text-signature">
+                    {step.label.replace(":", "")}
+                  </p>
+                  <p className="mt-4 max-w-[46rem] font-display text-[clamp(1.6rem,3.4vw,2.6rem)] leading-[1.25] tracking-[-0.014em] text-ink">
+                    {step.body}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

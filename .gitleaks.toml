@@ -1,0 +1,20 @@
+# Gitleaks config — secret scanning guard, per CSO audit recommendation.
+# Default rules cover AWS/GitHub/Slack/Stripe/private-key patterns; this file
+# exists so CI or a pre-commit hook can run `gitleaks detect` with repo-aware
+# allowlists from day one.
+
+title = "alter-waitlist"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Repo-specific safe patterns"
+paths = [
+  '''package-lock\.json''',
+  '''\.gstack/.*''',
+]
+regexes = [
+  # The public env var NAME (not a value) appears in code and docs by design.
+  '''NEXT_PUBLIC_WAITLIST_ENDPOINT''',
+]

@@ -42,7 +42,7 @@ export function Moat() {
   return (
     <section ref={root} className="relative py-[clamp(64px,8vw,96px)]">
       <Container>
-        <Eyebrow index="05" label="The moat" />
+        <Eyebrow index="06" label="The moat" />
         <div className="rule mt-6 mb-12" />
 
         <div ref={block} className="max-w-[46rem]">

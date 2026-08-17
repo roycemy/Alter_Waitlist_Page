@@ -6,6 +6,22 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 import { Container, Eyebrow } from "./kit";
 import { EASE, NO_REDUCED_MOTION, gsap, useGSAP, SplitText } from "./gsap-setup";
 
+/** Plain-prose footnotes to the file card: not memory, gets better, costs nothing. */
+const NOTES: { label: string; line: string }[] = [
+  {
+    label: "Vs memory",
+    line: "Theirs remembers what you told it. This learns how you work.",
+  },
+  {
+    label: "Over time",
+    line: "Correct it once. It holds — and the next answer is more accurate.",
+  },
+  {
+    label: "Cost",
+    line: "Nothing to try. The file lives on your device, not our servers.",
+  },
+];
+
 /**
  * Hero — per-character cascade on the headline (SplitText), everything else
  * lifts in behind it. Total headline reveal stays under 1.2s.
@@ -127,8 +143,26 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="act-day flex justify-center lg:justify-end">
+        <div className="flex flex-col items-center gap-9 lg:items-end">
           <AlterFileCard />
+
+          {/* The three questions the card raises, answered in plain prose —
+              caption to the object, never competing with it. */}
+          <dl
+            data-hero-fade
+            className="w-full max-w-[440px] border-t border-line"
+          >
+            {NOTES.map(({ label, line }) => (
+              <div key={label} className="border-b border-line py-3.5">
+                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint">
+                  {label}
+                </dt>
+                <dd className="mt-1.5 text-[14.5px] leading-[1.6] text-ink-soft">
+                  {line}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </Container>
     </section>

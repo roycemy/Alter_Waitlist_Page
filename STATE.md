@@ -20,6 +20,29 @@ A waitlist landing page good enough to send to a16z partners, WHOOP, and 30 warm
 intros without embarrassment. Bar: a partner screenshots it and sends it to a
 colleague.
 
+## GOAL v3 (2026-08-17, from Royce's design doc, Yash-approved: "refine based on
+## this document") — overrides where it conflicts with v2 below
+Core diagnosis: the page explains what Alter IS, never shows what it DOES.
+Nobody joins a waitlist for a noun. The verb: **Alter pushes back on your work
+so it comes out sharper than it would have alone.** Show it, don't say it.
+Priority order (Royce): 1) push-demo section between 03 and 04 (two-fates
+visual language, same rough input → generic-AI sycophancy vs Alter pushback);
+2) .alter card rebuilt as an ARTIFACT (passport/specimen object, 3D flip:
+front=object worth having, back=contents; prose below: vs ChatGPT memory /
+gets better over time / costs nothing) — never a terminal/config-file look;
+3) CTA rebuilt with real weight + specifics (scarcity number ONLY if Yash
+confirms it's real — trust rule 5; "we'll write back" promise also needs his
+confirm); 4) nav follows the act (dark over night, paper over paper — current
+hardcoded dark bar reads as a bug on paper sections); 5) compress section 02
+(scroll tax >> content once push demo exists; keep the recognition list —
+it's the feel-seen engine); 6) render Voice/Reasoning/Decisions as fields of
+ONE file object, not a 3-card features grid; 7) arc = manifesto typography
+(huge year labels, editorial prose, no timeline-dot roadmap UI).
+DON'T TOUCH (Royce, explicit): the palette + temperature shift; the
+typography (display is Instrument Serif — Royce wrote "Fraunces" in error);
+the two-fates section (the model for everything); the moat copy; the .alter
+file as central metaphor.
+
 ## ACCEPTANCE CRITERIA (v2, set 2026-08-13 — grade against real screenshots +
 ## Lighthouse runs, never descriptions; supersedes the v1 list)
 North star: a stranger lands not knowing what Alter is; by the bottom they get
