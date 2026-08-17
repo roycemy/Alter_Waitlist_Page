@@ -102,6 +102,17 @@ loud console error when unset, never fake success. **Endpoint URL = HUMAN GATE.*
 - Domain / name decision (AlterHQ collision — rebrand question is open)
 - Anything that ships to production. Preview deploys only, and only with explicit ship.
 
+## STATUS (2026-08-17, overnight run complete — supersedes the 08-13 status)
+Royce's full doc implemented and verifier-PASSed (round 4, commit 44f9452):
+push demo (04), card artifact with flip, CTA weight, act-following nav,
+stakes band, one-object what-it-does, manifesto arc, sections 01-08. Plus:
+security headers, OG image/meta, .gitleaks.toml, Escape-to-close, all
+unconfirmed promises gated behind YASH GATE comments (nothing unverifiable
+renders). Lighthouse mobile 92/96. AWAITING YASH: deploy go; Supabase
+project; domain; confirm-or-kill the gated CTA promises; verifier's design
+note for the next wave: the page's second half (moat/arc) returns to telling
+after 04 taught it to show — candidate for a future pass, Royce's call.
+
 ## STATUS (2026-08-13, end of autonomous loop)
 Round-2 fresh-context verifier: SHIP. All non-gated criteria green on
 measurement (hero 88px/3 lines, two-fates scrub confirmed as the screenshot
