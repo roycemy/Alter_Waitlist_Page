@@ -395,3 +395,12 @@ draft, the argument). Findings, section by section:
   screenshot showed two same tables arguing nothing — and the panels bled
   off-viewport at wide widths. A scrub section must read as an argument at
   EVERY frozen frame, or it doesn't ship.
+- 2026-08-17 (type-only rebuild): FORMAT LAW from Yash (see STATE.md):
+  everything after the hero is TYPE-ONLY — no cards, no panels, no UI
+  mockups, no certificate frames, no chip interviews, no dossier rows. The
+  push demo panels, the artifact card, the build steps, the arc: all deleted
+  as wrong FORMAT, not wrong craft. Capture the visitor in the most
+  simplistic number of words; the scroll motion is the spectacle. Signature
+  beats shipped: pinned focus-wave (Like you) and strike-through reversal
+  (The push). When tempted to render a product object, render a sentence
+  with insane motion instead.

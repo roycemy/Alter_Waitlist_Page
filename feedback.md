@@ -64,6 +64,13 @@ sessions; newer feedback overrides older. Repo source of truth: `Alter_Waitlist_
   to have cold: each lab's memory improves only its own app; none will build
   the layer that improves a competitor; Alter answers to no lab.
 
+## Format law (2026-08-17, latest — overrides earlier artifact-language rules)
+- Yash: hero good; essay/words/content shit; "Why are you showing cards?
+  That's so bad. It's not the format we wanted." → after the hero the page is
+  TYPE-ONLY: no cards, panels, mockups, diagrams, artifact objects. Minimal
+  words per beat (~a dozen), insane intentional scroll motion. The
+  specimen-card language and two-fates diagram are DEAD formats for Alter.
+
 ## Honesty & trust gates (non-negotiable, flag to Yash rather than decide)
 - **HONESTY GATE:** any demo/comparison is either a real executed run labeled as
   such, or visibly labeled "composed illustration, not a live run." An authored

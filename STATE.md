@@ -140,7 +140,30 @@ loud console error when unset, never fake success. **Endpoint URL = HUMAN GATE.*
 - Domain / name decision (AlterHQ collision — rebrand question is open)
 - Anything that ships to production. Preview deploys only, and only with explicit ship.
 
-## STATUS (2026-08-17 night, cut pass — supersedes all blocks below)
+## FORMAT LAW (2026-08-17, Yash verbatim — governs every future pass)
+"The hero is good. The essay is shit, the words are shit, the content is
+shit. Why are you doing cards? Why are you showing cards? That's so bad.
+It's not the format that we wanted. The scroll animations and visuals are
+amazing — think about how we can capture the user in the most simplistic
+amount of words. Everything needs to be intentional, and everything needs
+to be super, super insane."
+Operating rules: NO cards, NO panels, NO UI mockups, NO diagrams — the page
+is TYPE-ONLY after the hero. Minimal words (each section ≤ a dozen), insane
+intentional motion. Show-don't-tell is now satisfied by typography + motion,
+not by rendered product objects.
+
+## STATUS (2026-08-17 night, type-only rebuild — supersedes all blocks below)
+Page is now 5 beats, ~80 words after the hero: 01 hero (untouched — Yash:
+"the hero is good") / 02 Like you (pinned focus-wave: "ChatGPT writes like
+you. / Claude argues like you. / Cursor builds like you.") / 03 The push
+(night: "Most AI agrees with you." struck through → "Alter pushes back."
+lands from blur) / 04 moat (incentive lines) / 05 early access (CTA sub is
+now the ownership line "One file. Your device. No servers. Leave, and it
+leaves with you."). DELETED: Stakes, TheBuild, PushDemo, Arc, AlterFileCard
+(all card/panel formats). Verified: no console errors, zero mobile overflow,
+every scrub frame reads. AWAITING YASH eyeball.
+
+## STATUS (2026-08-17 night, cut pass — superseded)
 Yash on the two-fates section (05): "is bs… i hate it… that's the thing to
 remove." REMOVED ENTIRELY — MemoryObjection.tsx deleted, sections renumbered
 (moat 05, arc 06, CTA 07). The two-fates is NO LONGER the wow moment and NO

@@ -37,7 +37,7 @@ export function Cta() {
       <Container>
         <div className="rule mb-16" />
         <div ref={block} className="mx-auto max-w-[44rem] text-center">
-          <Eyebrow index="07" label="Early access" className="justify-center" />
+          <Eyebrow index="05" label="Early access" className="justify-center" />
 
           {/*
             YASH GATE: enable only if the numbers are true. Do not ship until
@@ -56,7 +56,7 @@ export function Cta() {
           </p>
 
           <p className="mx-auto mt-6 max-w-[30rem] text-[16.5px] leading-[1.68] text-ink-soft">
-            Invite-only while the file is young.
+            One file. Your device. No servers. Leave, and it leaves with you.
           </p>
 
           <div className="mt-12 flex justify-center">
