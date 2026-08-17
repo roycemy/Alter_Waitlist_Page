@@ -194,7 +194,7 @@ export function PushDemo() {
 
         <h2
           data-head
-          className="max-w-[26ch] font-display text-[clamp(1.9rem,4vw,2.9rem)] leading-[1.12] tracking-[-0.02em] text-ink"
+          className="max-w-[26ch] text-balance font-display text-[clamp(1.9rem,4vw,2.9rem)] leading-[1.12] tracking-[-0.02em] text-ink"
         >
           Agreement is cheap. Pushback is the product.
         </h2>

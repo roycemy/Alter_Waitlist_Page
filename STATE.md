@@ -138,7 +138,20 @@ loud console error when unset, never fake success. **Endpoint URL = HUMAN GATE.*
 - Domain / name decision (AlterHQ collision — rebrand question is open)
 - Anything that ships to production. Preview deploys only, and only with explicit ship.
 
-## STATUS (2026-08-17 evening, repositioning pass — supersedes the block below)
+## STATUS (2026-08-17 night, TEARDOWN pass — supersedes both blocks below)
+Yash rejected the surgical repositioning twice ("so shit" / "so bad") — the
+lesson (also in recipe LESSONS): two rejections mean the ask was a teardown,
+not a tweak. Shipped: hero = "AI has *amnesia*. Alter is the fix." (his own
+July-call one-liner), card REMOVED from hero, single-column hero + 3-col
+notes row (Not a chatbot / Vs memory / Cost). WhatItDoes DELETED (duplicate
+file-object junk); replaced by TheBuild.tsx (03 "The build" — It takes one
+conversation.): step 01 You talk (chip interview), step 02 It compiles (the
+AlterFileCard lives here now, as the output), step 03 It attaches (chatgpt/
+claude/cursor slice rows), labeled "product flow · illustrated" per honesty
+gate. Verified: SSR strings, banned grep zero, no console errors, 390px
+overflow 0. AWAITING YASH eyeball.
+
+## STATUS (2026-08-17 evening, repositioning pass — superseded)
 Yash: "the card is bs — not the product anymore… the scroll animations and
 visuals are great, the context itself is outdated." Visual system untouched;
 copy repositioned to the amplification register + current product truth:

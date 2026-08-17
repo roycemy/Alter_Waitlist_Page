@@ -379,3 +379,11 @@ draft, the argument). Findings, section by section:
   lab-incentive argument — the answer to "why doesn't Claude Projects just
   do this?" — kept cold and on the page. When a pass touches copy, re-check
   it against STATE.md "PRODUCT TRUTH" (kernel, three layers, extension=pipe).
+- 2026-08-17 (teardown pass): when Yash rejects the same surface twice ("so
+  shit" / "so bad" after a surgical copy pass), the ask was a TEARDOWN, not a
+  tweak — go structural: what got demoted (card out of the hero, into The
+  build as step-02 output), what got deleted (WhatItDoes — the page carried
+  two file-objects; duplicates are the "junk" he means), what got replaced
+  (hero line → his own call one-liner "AI has amnesia. Alter is the fix.";
+  "X. Alter fixes that." was thousand-YC-pages cadence). Show the product
+  flow (talk → compile → attach) instead of describing the artifact.

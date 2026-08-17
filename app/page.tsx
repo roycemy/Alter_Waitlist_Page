@@ -1,7 +1,7 @@
 import { Nav } from "@/components/sections/Nav";
 import { Hero } from "@/components/sections/Hero";
 import { Stakes } from "@/components/sections/Stakes";
-import { WhatItDoes } from "@/components/sections/WhatItDoes";
+import { TheBuild } from "@/components/sections/TheBuild";
 import { PushDemo } from "@/components/sections/PushDemo";
 import { MemoryObjection } from "@/components/sections/MemoryObjection";
 import { Moat } from "@/components/sections/Moat";
@@ -16,7 +16,7 @@ export default function Page() {
       <main>
         <Hero />
         <Stakes />
-        <WhatItDoes />
+        <TheBuild />
         <PushDemo />
         <MemoryObjection />
         <Moat />

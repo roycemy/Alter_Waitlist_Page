@@ -1,26 +1,26 @@
 "use client";
 
 import { useRef } from "react";
-import { AlterFileCard } from "@/components/AlterFileCard";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { Container, Eyebrow } from "./kit";
 import { EASE, NO_REDUCED_MOTION, gsap, useGSAP, SplitText } from "./gsap-setup";
 
-/** Plain-prose footnotes to the file card: not a chatbot, not memory, gets better, costs nothing. */
+/**
+ * Rebuilt 2026-08-17 (teardown pass): the card is no longer the hero shrine —
+ * it's the OUTPUT of section 03 (The build). The hero is the claim, the fix,
+ * and the form. Headline is Yash's own one-liner from the July pitch calls.
+ */
+
+/** Plain-prose footnotes: not a chatbot, not app memory, costs nothing. */
 const NOTES: { label: string; line: string }[] = [
   {
-    /* The trust line — kills the companion read before it's asked (2026-08-17
-       repositioning: amplification register, never simulation). */
+    /* The trust line — kills the companion read before it's asked. */
     label: "Not a chatbot",
     line: "It doesn't talk back. It doesn't simulate anyone. It makes the tools you already use work like they actually know you.",
   },
   {
     label: "Vs memory",
-    line: "Theirs remembers what you told it. This learns how you work.",
-  },
-  {
-    label: "Over time",
-    line: "Correct it once. It holds — and the next answer is more accurate.",
+    line: "Theirs remembers what you told it, inside one app. This learns how you work — and travels.",
   },
   {
     label: "Cost",
@@ -56,13 +56,13 @@ export function Hero() {
               return;
             }
             played = true;
-            // ~44 chars × 0.011s + 0.62s duration ≈ 1.1s total.
+            // ~28 chars × 0.013s + 0.62s duration ≈ 0.98s total.
             gsap.from(self.chars, {
               yPercent: 116,
               opacity: 0,
               duration: 0.62,
               ease: EASE,
-              stagger: 0.011,
+              stagger: 0.013,
             });
           },
         });
@@ -93,81 +93,60 @@ export function Hero() {
 
   return (
     <section ref={root} className="act-night relative">
-      <Container className="grid items-center gap-14 pb-[clamp(80px,11vw,120px)] pt-14 lg:grid-cols-[1.04fr_0.96fr] lg:gap-20 lg:pt-24">
-        <div className="max-w-[40rem]">
+      <Container className="pb-[clamp(80px,11vw,120px)] pt-16 lg:pt-28">
+        <div className="max-w-[54rem]">
           <div data-hero-fade>
             <Eyebrow index="01" label="The fix" />
           </div>
 
           <h1
             ref={headline}
-            aria-label="Every AI you use starts from zero. Alter fixes that."
-            className="mt-8 font-display text-[clamp(2.5rem,6.6vw,5.5rem)] leading-[0.99] tracking-[-0.018em] text-ink"
+            aria-label="AI has amnesia. Alter is the fix."
+            className="mt-8 font-display text-[clamp(3rem,8.4vw,7rem)] leading-[1.02] tracking-[-0.02em] text-ink"
           >
-            Every AI you use
+            AI has <em>amnesia</em>.
             <br />
-            starts from <em>zero</em>.
-            <br />
-            Alter fixes that.
+            Alter is the fix.
           </h1>
 
           <p
             data-hero-fade
-            className="mt-8 max-w-[34rem] text-[16.5px] leading-[1.68] text-ink-soft"
+            className="mt-9 max-w-[38rem] text-[16.5px] leading-[1.68] text-ink-soft"
           >
-            It doesn&apos;t know how you write, how you decide, or what
-            you&apos;re working on. Every day, every tool — you start over.
+            Every AI you use starts from zero. It doesn&apos;t know how you
+            write, how you decide, or what you&apos;re working on — so you
+            re-explain yourself, every day, to every tool.
           </p>
 
           <p
             data-hero-fade
-            className="mt-5 max-w-[34rem] text-[16.5px] leading-[1.68] text-ink"
+            className="mt-5 max-w-[38rem] text-[16.5px] leading-[1.68] text-ink"
           >
-            Alter builds a private file of exactly that, then attaches it to
-            the AI you already use. ChatGPT writes like you, not like everyone.
+            Alter builds a private file of exactly that and attaches it to the
+            AI you already use. ChatGPT writes like you, not like everyone.
           </p>
 
-          <div
-            data-hero-fade
-            className="act-day mt-6 flex min-h-10 w-full flex-wrap items-center justify-between gap-x-3 gap-y-1 rounded-sm border border-line bg-paper px-4 py-2 font-mono text-[11px] lg:hidden"
-          >
-            <span className="text-signature">you.alter</span>
-            <span className="text-ink-soft">voice · reasoning · decisions</span>
-            <span className="flex items-center gap-1.5 text-ink-faint">
-              <span
-                aria-hidden
-                className="inline-block size-1.5 rounded-full bg-signature"
-              />
-              local
-            </span>
-          </div>
-
-          <div data-hero-fade className="mt-10">
+          <div data-hero-fade className="mt-10 max-w-[34rem]">
             <WaitlistForm />
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-9 lg:items-end">
-          <AlterFileCard />
-
-          {/* The three questions the card raises, answered in plain prose —
-              caption to the object, never competing with it. */}
-          <dl
-            data-hero-fade
-            className="w-full max-w-[440px] border-t border-line"
-          >
-            {NOTES.map(({ label, line }) => (
-              <div key={label} className="border-b border-line py-3.5">
-                <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint">
-                  {label}
-                </dt>
-                <dd className="mt-1.5 text-[14.5px] leading-[1.6] text-ink-soft">
-                  {line}
-                </dd>
-              </div>
-            ))}
-          </dl>
-        </div>
+        {/* The three questions the claim raises, answered in plain prose. */}
+        <dl
+          data-hero-fade
+          className="mt-[clamp(56px,7vw,84px)] grid gap-x-10 border-t border-line sm:grid-cols-3"
+        >
+          {NOTES.map(({ label, line }) => (
+            <div key={label} className="border-b border-line py-4 sm:border-b-0 sm:pt-5">
+              <dt className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-faint">
+                {label}
+              </dt>
+              <dd className="mt-2 max-w-[24rem] text-[14.5px] leading-[1.6] text-ink-soft">
+                {line}
+              </dd>
+            </div>
+          ))}
+        </dl>
       </Container>
     </section>
   );
