@@ -24,9 +24,9 @@ sessions; newer feedback overrides older. Repo source of truth: `Alter_Waitlist_
   typography locked: Instrument Serif display (italic on one emotional word),
   Instrument Sans body, IBM Plex Mono meta. (Royce twice wrote "Fraunces" — error;
   it is Instrument Serif.)
-- One named wow moment only: "The two fates." Everything else stays restrained.
-- Artifact language: the .alter file renders as specimen/passport objects
-  (certificate frames, serial lines, ruled meta) — NEVER terminal/config-file look.
+- One wow moment only. (Was "The two fates" — Yash killed that section AND the
+  specimen-card artifact language on 2026-08-17; see Format law below. Never
+  rebuild either.)
 - No drop-shadow card grids, no gradients, no glow, no emoji, texture ≤5% opacity.
 
 ## Copy corrections (hard)
