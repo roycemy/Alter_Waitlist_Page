@@ -15,6 +15,33 @@ Drive doc — the only a16z meeting on record (Arnav Kumar, Jul 20) never discus
 Alter. The rule stands on Yash's authority; do not cite investor validation for
 it in any deck or copy until Yash confirms the conversation existed off-record.)
 
+## AMPLIFICATION REGISTER (2026-08-17, Yash — supersedes/extends the rule above)
+Josh Elman's line (confirmed by Yash from Josh's emails, off-Granola): AI that
+AMPLIFIES a real person = good; AI that SIMULATES being human = his uncanny
+valley. Alter lives on the right side of the line — the WORDS must too. Every
+sentence test: does it sound like a tool, or a fake friend? Fake friend → cut.
+Danger → safe swaps (binding):
+- "second personal identity" → "your context, attached to any model"
+- "a partner as good as you" → "makes ChatGPT write like you, not like everyone"
+- "it pushes you like a partner" → "spots your patterns before you do"
+- "living model of you" → "a file you own that travels between tools"
+- "Alter knows you" → "Alter carries your context"
+- "companion" → never, in any form
+Never name Josh/a16z in public copy. The lab-question answer to have COLD
+(now rendered as section 06): each lab's memory only improves its own app;
+none will build the layer that improves a competitor; Alter answers to no lab.
+
+## PRODUCT TRUTH (2026-08-17, from Jul 21–29 calls — the page must match THIS)
+One-liner: "AI has amnesia. Alter is the fix." Three layers: access/input
+(interview, Claude export, extension) → identity (the kernel / personality
+card + evidence graph) → outcome (tools sound like you, continue your work).
+MVP: <10-min onboarding → "holy shit, this is me" → downloadable profile card.
+The extension is a PIPE, not the product; a chat surface may be the front
+door, but the identity object is the product. The card on the page = the
+personality card (carrier); the COPY sells the outcome (tools working like
+you), never the noun. Trajectory: file works → other tools call it → it's the
+format ("Stripe for identity" — internal framing only, not page copy).
+
 ## GOAL
 A waitlist landing page good enough to send to a16z partners, WHOOP, and 30 warm
 intros without embarrassment. Bar: a partner screenshots it and sends it to a
@@ -110,6 +137,17 @@ loud console error when unset, never fake success. **Endpoint URL = HUMAN GATE.*
 - The form backend endpoint URL
 - Domain / name decision (AlterHQ collision — rebrand question is open)
 - Anything that ships to production. Preview deploys only, and only with explicit ship.
+
+## STATUS (2026-08-17 evening, repositioning pass — supersedes the block below)
+Yash: "the card is bs — not the product anymore… the scroll animations and
+visuals are great, the context itself is outdated." Visual system untouched;
+copy repositioned to the amplification register + current product truth:
+hero → "Every AI you use starts from zero. Alter fixes that." (eyebrow "The
+fix", italic *zero*), body sells attach-to-your-tools ("ChatGPT writes like
+you, not like everyone"), trust line added as first hero note ("Not a
+chatbot"), Moat (06) rewritten to the lab-incentive argument. Stakes/push
+demo/two-fates/arc/CTA copy unchanged (already on-register). Verify + commit
+pending in-pass.
 
 ## STATUS (2026-08-17, overnight run complete — supersedes the 08-13 status)
 Royce's full doc implemented and verifier-PASSed (round 4, commit 44f9452):

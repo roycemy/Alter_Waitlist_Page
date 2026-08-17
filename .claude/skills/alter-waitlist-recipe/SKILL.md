@@ -362,3 +362,20 @@ draft, the argument). Findings, section by section:
   too, not just scrubs — the typing card shipped SSR-empty (inline opacity:0)
   until rebuilt so the server renders the full document and the client clears
   and retypes it as the entrance. JS-off/no-hydration is a first-class reader.
+- 2026-08-17 (repositioning pass): AMPLIFICATION REGISTER is now the copy law
+  (see STATE.md "AMPLIFICATION REGISTER"): every sentence must sound like a
+  tool, never a fake friend. Josh Elman's amplify-vs-simulate line is now
+  CONFIRMED (Yash relayed it from Josh's emails, 2026-08-17) — but he is
+  never named in public copy. Banned additions on top of the standing list:
+  "companion", "living model of you", "Alter knows you", "a partner as good
+  as you", "second personal identity". Safe register: "your context, attached
+  to any model", "ChatGPT writes like you, not like everyone", "spots your
+  patterns before you do", "a file you own that travels between tools".
+- 2026-08-17 (repositioning pass): the page sells the OUTCOME, never the noun
+  — Yash: "the card is bs, not the product anymore" while the card's VISUAL
+  stays (it is the personality card, the carrier). Hero is now "Every AI you
+  use starts from zero. Alter fixes that." (matches the one-liner from the
+  Jul 21–29 calls: "AI has amnesia. Alter is the fix."). Moat (06) is the
+  lab-incentive argument — the answer to "why doesn't Claude Projects just
+  do this?" — kept cold and on the page. When a pass touches copy, re-check
+  it against STATE.md "PRODUCT TRUTH" (kernel, three layers, extension=pipe).

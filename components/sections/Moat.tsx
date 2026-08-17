@@ -5,11 +5,12 @@ import { Container, Eyebrow } from "./kit";
 import { EASE, NO_REDUCED_MOTION, gsap, useGSAP } from "./gsap-setup";
 
 /**
- * The moat — why a lab can't build this. Three sentences, stated in our own
- * voice (no investor attribution: the Battery/Stone Point transcripts inform
- * the argument but never said it — see the banned-intent/sourcing audit in
- * the recipe skill). A half-viewport breather between the objection and the
- * arc, per the pacing rhythm.
+ * The moat — why a lab can't build this. Rewritten 2026-08-17 to the
+ * incentive argument (the answer to "why doesn't Claude Projects just do
+ * this?" — the one to have cold): each lab's memory only improves its own
+ * app, and none will build the layer that improves a competitor. Stated in
+ * our own voice, no investor attribution (see the sourcing audit in the
+ * recipe skill). A half-viewport breather between the objection and the arc.
  */
 export function Moat() {
   const root = useRef<HTMLElement>(null);
@@ -48,23 +49,23 @@ export function Moat() {
         <div ref={block} className="max-w-[46rem]">
           <p
             data-moat-line
-            className="font-display text-[clamp(1.35rem,2.9vw,2.3rem)] leading-[1.32] tracking-[-0.013em] text-ink"
+            className="text-balance font-display text-[clamp(1.35rem,2.9vw,2.3rem)] leading-[1.32] tracking-[-0.013em] text-ink"
           >
-            A lab needs your data on its servers — that&apos;s how the next
-            model gets trained.
+            OpenAI&apos;s memory makes ChatGPT better. Anthropic&apos;s makes
+            Claude better.
           </p>
           <p
             data-moat-line
             className="mt-5 font-display text-[clamp(1.35rem,2.9vw,2.3rem)] leading-[1.32] tracking-[-0.013em] text-ink"
           >
-            The .alter file lives on your device and reads into any model.
+            Neither will ever build the layer that improves a competitor.
           </p>
           <p
             data-moat-line
             className="mt-5 font-display text-[clamp(1.35rem,2.9vw,2.3rem)] leading-[1.32] tracking-[-0.013em] text-ink-soft"
           >
-            To copy it, they&apos;d have to abandon the business model that
-            funds them.
+            Alter answers to no lab. Your file makes every one of them work
+            like you.
           </p>
         </div>
       </Container>

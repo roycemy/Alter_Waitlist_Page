@@ -6,8 +6,14 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 import { Container, Eyebrow } from "./kit";
 import { EASE, NO_REDUCED_MOTION, gsap, useGSAP, SplitText } from "./gsap-setup";
 
-/** Plain-prose footnotes to the file card: not memory, gets better, costs nothing. */
+/** Plain-prose footnotes to the file card: not a chatbot, not memory, gets better, costs nothing. */
 const NOTES: { label: string; line: string }[] = [
+  {
+    /* The trust line — kills the companion read before it's asked (2026-08-17
+       repositioning: amplification register, never simulation). */
+    label: "Not a chatbot",
+    line: "It doesn't talk back. It doesn't simulate anyone. It makes the tools you already use work like they actually know you.",
+  },
   {
     label: "Vs memory",
     line: "Theirs remembers what you told it. This learns how you work.",
@@ -50,7 +56,7 @@ export function Hero() {
               return;
             }
             played = true;
-            // 49 chars × 0.011s + 0.62s duration ≈ 1.16s total.
+            // ~44 chars × 0.011s + 0.62s duration ≈ 1.1s total.
             gsap.from(self.chars, {
               yPercent: 116,
               opacity: 0,
@@ -90,35 +96,35 @@ export function Hero() {
       <Container className="grid items-center gap-14 pb-[clamp(80px,11vw,120px)] pt-14 lg:grid-cols-[1.04fr_0.96fr] lg:gap-20 lg:pt-24">
         <div className="max-w-[40rem]">
           <div data-hero-fade>
-            <Eyebrow index="01" label="The file" />
+            <Eyebrow index="01" label="The fix" />
           </div>
 
           <h1
             ref={headline}
-            aria-label="AI should learn how you think — not think for you."
+            aria-label="Every AI you use starts from zero. Alter fixes that."
             className="mt-8 font-display text-[clamp(2.5rem,6.6vw,5.5rem)] leading-[0.99] tracking-[-0.018em] text-ink"
           >
-            AI should learn
+            Every AI you use
             <br />
-            how you <em>think</em> —
+            starts from <em>zero</em>.
             <br />
-            not think for you.
+            Alter fixes that.
           </h1>
 
           <p
             data-hero-fade
             className="mt-8 max-w-[34rem] text-[16.5px] leading-[1.68] text-ink-soft"
           >
-            Every AI forgets you the second you close the tab. Switch models,
-            start over.
+            It doesn&apos;t know how you write, how you decide, or what
+            you&apos;re working on. Every day, every tool — you start over.
           </p>
 
           <p
             data-hero-fade
             className="mt-5 max-w-[34rem] text-[16.5px] leading-[1.68] text-ink"
           >
-            Alter ends that. One file. It learns how you work and carries it
-            into every AI you use.
+            Alter builds a private file of exactly that, then attaches it to
+            the AI you already use. ChatGPT writes like you, not like everyone.
           </p>
 
           <div
