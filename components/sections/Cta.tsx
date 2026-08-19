@@ -51,9 +51,10 @@ export function Cta() {
             "Every access note is written by a person."
           */}
 
-          <p className="mx-auto mt-10 max-w-[34rem] text-balance font-display text-[clamp(2.2rem,4.8vw,3.6rem)] leading-[1.15] tracking-[-0.02em] text-ink">
-            Early access is going out by hand, a few people at a time.
-          </p>
+          <h2 className="mx-auto mt-10 max-w-[34rem] text-balance font-display text-[clamp(2.2rem,4.8vw,3.6rem)] leading-[1.15] tracking-[-0.02em] text-ink">
+            Early access is going out by <em>hand</em>, a few people at a
+            time.
+          </h2>
 
           <p className="mx-auto mt-6 max-w-[30rem] text-[16.5px] leading-[1.68] text-ink-soft">
             One file. Your device. No servers. Leave, and it leaves with you.

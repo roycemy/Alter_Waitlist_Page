@@ -15,12 +15,14 @@ import { EASE, NO_REDUCED_MOTION, gsap, useGSAP, SplitText } from "./gsap-setup"
 const NOTES: { label: string; line: string }[] = [
   {
     /* The trust line — kills the companion read before it's asked. */
+    /* "doesn't chat", not "doesn't talk back" — QA caught the collision with
+       section 03's "Alter pushes back." (a literal reader trips on which). */
     label: "Not a chatbot",
-    line: "It doesn't talk back. It doesn't simulate anyone. It makes the tools you already use work like they actually know you.",
+    line: "It doesn't chat. It doesn't simulate anyone. It makes the tools you already use work like they actually know you.",
   },
   {
     label: "Vs memory",
-    line: "Theirs remembers what you told it, inside one app. This learns how you work — and travels.",
+    line: "ChatGPT's memory remembers what you told it, inside one app. This learns how you work — and travels.",
   },
   {
     label: "Cost",
@@ -51,6 +53,11 @@ export function Hero() {
           autoSplit: true,
           aria: "hidden",
           onSplit(self) {
+            // SplitText's aria:"hidden" lands on the h1 ROOT too, which
+            // erases the heading (and its aria-label) from the a11y tree —
+            // QA blocker. Re-expose the root; the char/word wrappers keep
+            // their own aria-hidden.
+            headline.current?.removeAttribute("aria-hidden");
             if (played) {
               gsap.set(self.chars, { yPercent: 0, opacity: 1 });
               return;
@@ -92,8 +99,11 @@ export function Hero() {
   );
 
   return (
-    <section ref={root} className="act-night relative">
-      <Container className="pb-[clamp(80px,11vw,120px)] pt-16 lg:pt-28">
+    <section
+      ref={root}
+      className="act-night relative flex min-h-[calc(100svh-57px)] items-center"
+    >
+      <Container className="pb-[clamp(64px,8vw,96px)] pt-12 lg:pt-16">
         <div className="max-w-[54rem]">
           <div data-hero-fade>
             <Eyebrow index="01" label="The fix" />

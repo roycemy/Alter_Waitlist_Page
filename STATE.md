@@ -152,7 +152,31 @@ is TYPE-ONLY after the hero. Minimal words (each section ≤ a dozen), insane
 intentional motion. Show-don't-tell is now satisfied by typography + motion,
 not by rendered product objects.
 
-## STATUS (2026-08-17 night, type-only rebuild — supersedes all blocks below)
+## STATUS (2026-08-18, five-persona QA pass — supersedes all blocks below)
+Five fresh-context QA personas ran the full page. Verdicts: VC partner
+FORWARD (screenshot moment = the push beat) · target user on mobile SIGNED
+UP · skeptic engineer RESPECT WITH NITS (privacy claim survived forensics:
+zero external requests, honest form failure, JS-off content-identical) ·
+design judge QUIET RESPECT (pinned wave praised; moat wrap was his one
+MAJOR) · a11y FIXABLE LAPSES (one true BLOCKER: SplitText aria-hidden on
+the h1 root erased the headline from the a11y tree).
+ALL FIXES APPLIED same-pass: h1 re-exposed + real h2s in every section ·
+submit focus ring (outline-signature ≥3:1) · invalid-submit focuses input ·
+ghost-opacity floor 0.55 in the wave · moat/push/like-you entrance floors +
+earlier triggers (blank-flash killed) · moat lines rebroken (no stranded
+"better."/"competitor.") · hero fills 100svh-57px (1920 sliver gone) · nav
+act swap 150ms · italic accent restored in acts 04/05 (competitor, hand) ·
+form 56px + double-submit guard · copy: "It doesn't chat." / "ChatGPT's
+memory remembers…" / "Neither has any reason…" · favicon.ico (RGBA multi-
+size) · robots.txt · poweredByHeader off.
+DEPLOY CHECKLIST ITEM (from QA, blocking share cards): set
+NEXT_PUBLIC_SITE_URL at deploy or og:image ships as localhost and 404s.
+OPEN DESIGN NOTES (not applied, Yash's call): 2560px type-scale ceiling +
+short night bands · push beat blur motif echoes the wave (could land via
+mask-rise instead) · moat framing reads investor-facing to the target user
+(VC called the same section the credibility anchor — tension, not a bug).
+
+## STATUS (2026-08-17 night, type-only rebuild — superseded)
 Page is now 5 beats, ~80 words after the hero: 01 hero (untouched — Yash:
 "the hero is good") / 02 Like you (pinned focus-wave: "ChatGPT writes like
 you. / Claude argues like you. / Cursor builds like you.") / 03 The push

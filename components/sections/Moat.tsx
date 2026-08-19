@@ -25,13 +25,15 @@ export function Moat() {
           "[data-moat-line]",
           block.current,
         );
+        // Floor at 0.25 opacity + early trigger: QA measured this section
+        // entering as a blank band for 700ms on fast mobile flicks.
         gsap.from(lines, {
           x: -28,
-          opacity: 0,
-          duration: 0.9,
+          opacity: 0.25,
+          duration: 0.7,
           ease: EASE,
-          stagger: 0.14,
-          scrollTrigger: { trigger: block.current, start: "top 78%" },
+          stagger: 0.11,
+          scrollTrigger: { trigger: block.current, start: "top 88%" },
         });
       });
 
@@ -44,21 +46,24 @@ export function Moat() {
     <section ref={root} className="relative py-[clamp(64px,8vw,96px)]">
       <Container>
         <Eyebrow index="04" label="The moat" />
+        <h2 className="sr-only">Why no lab can build this</h2>
         <div className="rule mt-6 mb-12" />
 
         <div ref={block} className="max-w-[46rem]">
           <p
             data-moat-line
-            className="text-balance font-display text-[clamp(1.35rem,2.9vw,2.3rem)] leading-[1.32] tracking-[-0.013em] text-ink"
+            className="font-display text-[clamp(1.35rem,2.9vw,2.3rem)] leading-[1.32] tracking-[-0.013em] text-ink"
           >
-            OpenAI&apos;s memory makes ChatGPT better. Anthropic&apos;s makes
-            Claude better.
+            OpenAI&apos;s memory makes ChatGPT better.
+            <br />
+            Anthropic&apos;s makes Claude better.
           </p>
           <p
             data-moat-line
-            className="mt-5 font-display text-[clamp(1.35rem,2.9vw,2.3rem)] leading-[1.32] tracking-[-0.013em] text-ink"
+            className="mt-5 max-w-[36rem] text-balance font-display text-[clamp(1.35rem,2.9vw,2.3rem)] leading-[1.32] tracking-[-0.013em] text-ink"
           >
-            Neither will ever build the layer that improves a competitor.
+            Neither has any reason to build the layer that improves a{" "}
+            <em>competitor</em>.
           </p>
           <p
             data-moat-line

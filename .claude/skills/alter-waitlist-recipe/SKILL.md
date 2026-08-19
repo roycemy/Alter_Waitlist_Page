@@ -404,3 +404,13 @@ draft, the argument). Findings, section by section:
   beats shipped: pinned focus-wave (Like you) and strike-through reversal
   (The push). When tempted to render a product object, render a sentence
   with insane motion instead.
+- 2026-08-18 (five-persona QA): persona-scoped fresh-context QA (VC skim /
+  skeptic engineer / design judge / mobile target user / keyboard+low-vision)
+  with disjoint scopes found what four verifier rounds missed: SplitText's
+  aria:"hidden" config hides the H1 ROOT itself (remove it post-split, keep
+  wrappers hidden); gsap.from(opacity:0) once-on-enter sections read as
+  blank bands on fast mobile flicks (floor 0.25+, trigger ≥85%); text-balance
+  can still strand a word — check display lines at 1440 AND 1920 AND 2560;
+  next/PIL favicon.ico must be RGBA or Turbopack build fails. Personas earn
+  their cost: each verdict argued from the visitor's incentives, not a
+  checklist.

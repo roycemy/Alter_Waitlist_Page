@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState } from "react";
+import { useId, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -19,17 +19,21 @@ export function WaitlistForm({ id }: { id?: string }) {
   const [errorMessage, setErrorMessage] = useState("");
   const inputId = useId();
   const errorId = useId();
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const isSubmitting = status === "submitting";
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (isSubmitting) return;
 
     const trimmed = email.trim();
 
     if (!isValidEmail(trimmed)) {
       setStatus("error");
       setErrorMessage("Enter a valid email address.");
+      // Move focus to the invalid field so keyboard users land on the fix.
+      inputRef.current?.focus();
       return;
     }
 
@@ -90,6 +94,7 @@ export function WaitlistForm({ id }: { id?: string }) {
           Email address
         </label>
         <Input
+          ref={inputRef}
           id={inputId}
           type="email"
           name="email"
@@ -108,7 +113,7 @@ export function WaitlistForm({ id }: { id?: string }) {
             }
           }}
           className={cn(
-            "h-11 border-line bg-transparent px-3.5 text-ink placeholder:text-ink-faint focus-visible:border-signature focus-visible:ring-signature/30 aria-invalid:border-error aria-invalid:ring-error/25"
+            "h-14 border-line bg-transparent px-4 text-ink placeholder:text-ink-faint focus-visible:border-signature focus-visible:ring-signature/30 aria-invalid:border-error aria-invalid:ring-error/25"
           )}
         />
         <p
@@ -125,7 +130,7 @@ export function WaitlistForm({ id }: { id?: string }) {
       <Button
         type="submit"
         disabled={isSubmitting}
-        className="h-11 shrink-0 rounded-full px-6 text-sm font-medium"
+        className="h-14 shrink-0 rounded-full px-7 text-sm font-medium"
       >
         {isSubmitting ? "Joining…" : "Join the waitlist"}
       </Button>

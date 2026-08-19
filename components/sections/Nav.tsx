@@ -66,7 +66,7 @@ export function Nav() {
     <header
       ref={headerRef}
       className={cn(
-        "sticky top-0 z-40 border-b border-line bg-paper/85 backdrop-blur-md transition-colors duration-300",
+        "sticky top-0 z-40 border-b border-line bg-paper/85 backdrop-blur-md transition-colors duration-150",
         act === "night" ? "act-night" : "act-day",
       )}
     >

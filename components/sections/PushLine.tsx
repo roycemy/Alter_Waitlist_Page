@@ -25,33 +25,35 @@ export function PushLine() {
         const answer = root.current?.querySelector("[data-answer]");
         if (!premise || !strike || !answer) return;
 
+        // Earlier trigger + floored opacities + tighter beat: QA saw fast
+        // scrollers meet a half-empty section before the payoff landed.
         const tl = gsap.timeline({
-          scrollTrigger: { trigger: root.current, start: "top 72%" },
+          scrollTrigger: { trigger: root.current, start: "top 80%" },
         });
 
         tl.from(premise, {
           y: 22,
-          opacity: 0,
+          opacity: 0.3,
           color: "#f2efe6",
-          duration: 0.7,
+          duration: 0.6,
           ease: EASE,
         })
           .from(
             strike,
-            { scaleX: 0, duration: 0.5, ease: "power2.inOut" },
-            0.55,
+            { scaleX: 0, duration: 0.45, ease: "power2.inOut" },
+            0.4,
           )
           .from(
             answer,
             {
               y: 30,
-              opacity: 0,
+              opacity: 0.25,
               filter: "blur(12px)",
-              duration: 0.9,
+              duration: 0.8,
               ease: EASE,
               clearProps: "filter",
             },
-            0.85,
+            0.55,
           );
       });
 
@@ -63,9 +65,9 @@ export function PushLine() {
   return (
     <section
       ref={root}
-      className="act-night relative py-[clamp(96px,12vw,150px)]"
+      className="act-night relative flex min-h-[70svh] items-center py-[clamp(96px,12vw,150px)]"
     >
-      <Container>
+      <Container className="w-full">
         <Eyebrow index="03" label="The push" />
 
         <p
@@ -80,12 +82,12 @@ export function PushLine() {
           />
         </p>
 
-        <p
+        <h2
           data-answer
           className="mt-5 font-display text-[clamp(2.4rem,6.4vw,5.2rem)] leading-[1.04] tracking-[-0.02em] text-ink"
         >
           Alter pushes <em>back</em>.
-        </p>
+        </h2>
       </Container>
     </section>
   );

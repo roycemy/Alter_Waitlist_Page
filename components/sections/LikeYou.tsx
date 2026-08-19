@@ -43,12 +43,17 @@ export function LikeYou() {
           },
         });
 
-        // Each line arrives from soft-blur ghost to full ink…
-        tl.from(lines[0], { opacity: 0.18, filter: "blur(7px)", duration: 0.24 }, 0.02)
-          .to(lines[0], { opacity: 0.4, duration: 0.2 }, 0.3)
-          .from(lines[1], { opacity: 0.18, filter: "blur(7px)", duration: 0.24 }, 0.3)
-          .to(lines[1], { opacity: 0.4, duration: 0.2 }, 0.58)
-          .from(lines[2], { opacity: 0.18, filter: "blur(7px)", duration: 0.24 }, 0.58)
+        // Each line arrives from soft-blur ghost to full ink. Line 1 sharpens
+        // immediately (QA: the section read as an illegible blur stack on
+        // entry) and ghosts sit at 0.35, never below the readability floor.
+        // Ghost floor is 0.55 — the lowest opacity that keeps 86px display
+        // type over the 3:1 large-text contrast line on paper (a11y QA).
+        // The blur carries the focus effect; opacity only assists.
+        tl.from(lines[0], { opacity: 0.55, filter: "blur(5px)", duration: 0.12 }, 0)
+          .to(lines[0], { opacity: 0.55, duration: 0.2 }, 0.3)
+          .from(lines[1], { opacity: 0.55, filter: "blur(5px)", duration: 0.22 }, 0.3)
+          .to(lines[1], { opacity: 0.55, duration: 0.2 }, 0.58)
+          .from(lines[2], { opacity: 0.55, filter: "blur(5px)", duration: 0.22 }, 0.58)
           // …and the finale restores the whole stack to the markup state.
           .to([lines[0], lines[1]], { opacity: 1, duration: 0.16 }, 0.84);
       });
@@ -85,6 +90,7 @@ export function LikeYou() {
         >
           <Container className="py-[clamp(72px,9vw,110px)] md:py-0">
             <Eyebrow index="02" label="Like you" />
+            <h2 className="sr-only">Every tool, like you</h2>
             <div className="mt-10 space-y-[0.35em]">
               {LINES.map((head) => (
                 <p
